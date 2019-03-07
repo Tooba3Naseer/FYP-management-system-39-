@@ -33,6 +33,7 @@
             this.textBoxdes = new System.Windows.Forms.TextBox();
             this.textBoxtitle = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Description
@@ -72,7 +73,7 @@
             // Save
             // 
             this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(251, 282);
+            this.Save.Location = new System.Drawing.Point(307, 269);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(75, 23);
             this.Save.TabIndex = 6;
@@ -80,11 +81,23 @@
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
+            // Cancel
+            // 
+            this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.Location = new System.Drawing.Point(179, 269);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.TabIndex = 7;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
             // InsertProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(433, 400);
+            this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.textBoxtitle);
             this.Controls.Add(this.textBoxdes);
@@ -92,6 +105,7 @@
             this.Controls.Add(this.Description);
             this.Name = "InsertProject";
             this.Text = "InsertProject";
+            this.Load += new System.EventHandler(this.InsertProject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +117,6 @@
         private System.Windows.Forms.TextBox textBoxdes;
         private System.Windows.Forms.TextBox textBoxtitle;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button Cancel;
     }
 }
