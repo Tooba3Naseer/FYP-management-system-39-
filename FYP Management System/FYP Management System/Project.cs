@@ -41,6 +41,13 @@ namespace FYP_Management_System
             ProjectData.DataSource = dataTable; // assign to data grid
             sda.Update(dataTable);
             conn.Close();
+            //add button column
+            DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+            button.HeaderText = "Buttons";
+            button.Name = "button";
+            button.Text = "DELETE";
+            button.UseColumnTextForButtonValue = true;
+            ProjectData.Columns.Add(button);
         }
 
         private void SearchText_TextChanged(object sender, EventArgs e)
@@ -52,7 +59,18 @@ namespace FYP_Management_System
 
         private void ProjectData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == 3 && e.RowIndex >= 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure that you want to delete it?", "Confirmation", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    //do something
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
+            }
         }
 
         private void Create_Click(object sender, EventArgs e)
