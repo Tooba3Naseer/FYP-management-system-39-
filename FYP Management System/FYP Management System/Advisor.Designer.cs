@@ -1,6 +1,6 @@
 ﻿namespace FYP_Management_System
 {
-    partial class Evaluation
+    partial class Advisor
     {
         /// <summary>
         /// Required designer variable.
@@ -34,10 +34,10 @@
             this.search = new System.Windows.Forms.Label();
             this.Create = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.EvaluationData = new System.Windows.Forms.DataGridView();
+            this.AdvisorData = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EvaluationData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvisorData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -58,9 +58,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(256, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 29);
+            this.label1.Size = new System.Drawing.Size(250, 29);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Manage Evaluations";
+            this.label1.Text = "Advisors Information";
             // 
             // panel1
             // 
@@ -70,7 +70,7 @@
             this.panel1.Controls.Add(this.search);
             this.panel1.Controls.Add(this.Create);
             this.panel1.Controls.Add(this.textBoxSearch);
-            this.panel1.Location = new System.Drawing.Point(12, 69);
+            this.panel1.Location = new System.Drawing.Point(12, 83);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 62);
             this.panel1.TabIndex = 8;
@@ -104,38 +104,36 @@
             this.textBoxSearch.Size = new System.Drawing.Size(154, 20);
             this.textBoxSearch.TabIndex = 3;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
-            this.textBoxSearch.VisibleChanged += new System.EventHandler(this.textBoxSearch_VisibleChanged);
-            this.textBoxSearch.Validated += new System.EventHandler(this.textBoxSearch_Validated);
             // 
-            // EvaluationData
+            // AdvisorData
             // 
-            this.EvaluationData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AdvisorData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EvaluationData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EvaluationData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EvaluationData.Location = new System.Drawing.Point(12, 154);
-            this.EvaluationData.Name = "EvaluationData";
-            this.EvaluationData.Size = new System.Drawing.Size(776, 275);
-            this.EvaluationData.TabIndex = 9;
-            this.EvaluationData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EvaluationData_CellContentClick);
+            this.AdvisorData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AdvisorData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AdvisorData.Location = new System.Drawing.Point(12, 163);
+            this.AdvisorData.Name = "AdvisorData";
+            this.AdvisorData.Size = new System.Drawing.Size(776, 275);
+            this.AdvisorData.TabIndex = 9;
+            this.AdvisorData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdvisorData_CellContentClick);
             // 
-            // Evaluation
+            // Advisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.EvaluationData);
+            this.Controls.Add(this.AdvisorData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "Evaluation";
-            this.Text = "Evaluation";
-            this.Load += new System.EventHandler(this.Evaluation_Load);
+            this.Name = "Advisor";
+            this.Text = "Advisor";
+            this.Load += new System.EventHandler(this.Advisor_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EvaluationData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvisorData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,6 +146,6 @@
         private System.Windows.Forms.Label search;
         private System.Windows.Forms.Button Create;
         private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.DataGridView EvaluationData;
+        private System.Windows.Forms.DataGridView AdvisorData;
     }
 }

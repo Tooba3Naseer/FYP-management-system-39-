@@ -88,6 +88,10 @@ namespace FYP_Management_System
 
         private void StudentData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            StudentData.DataSource = null;
+            StudentData.Rows.Clear();
+            StudentData.Columns.Clear();
+            update();
             StudentData.Rows[e.RowIndex].ReadOnly = true;
 
 

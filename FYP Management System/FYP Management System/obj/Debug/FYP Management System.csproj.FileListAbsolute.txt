@@ -11,3 +11,7 @@ F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\o
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.InsertProject.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Student.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.PersonStudent.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Evaluation.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Evaluation.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Advisor.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.CreateAdvisor.resources

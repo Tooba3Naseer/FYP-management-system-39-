@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advisor.Designer.cs">
+      <DependentUpon>Advisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create Evaluation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Create Student.Designer.cs">
       <DependentUpon>Create Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAdvisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAdvisor.Designer.cs">
+      <DependentUpon>CreateAdvisor.cs</DependentUpon>
     </Compile>
     <Compile Include="Evaluation.cs">
       <SubType>Form</SubType>
@@ -85,8 +97,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validations.cs" />
+    <EmbeddedResource Include="Advisor.resx">
+      <DependentUpon>Advisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create Evaluation.resx">
+      <DependentUpon>Create Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create Student.resx">
       <DependentUpon>Create Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAdvisor.resx">
+      <DependentUpon>CreateAdvisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluation.resx">
+      <DependentUpon>Evaluation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertProject.resx">
       <DependentUpon>InsertProject.cs</DependentUpon>
