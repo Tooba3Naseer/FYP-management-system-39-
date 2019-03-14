@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Create Evaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create Evaluation.Designer.cs">
+      <DependentUpon>Create Evaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create Student.Designer.cs">
+      <DependentUpon>Create Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evaluation.Designer.cs">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertProject.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InsertProject.Designer.cs">
       <DependentUpon>InsertProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonStudent.Designer.cs">
+      <DependentUpon>PersonStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Project.cs">
       <SubType>Form</SubType>
@@ -61,8 +85,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validations.cs" />
+    <EmbeddedResource Include="Create Student.resx">
+      <DependentUpon>Create Student.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsertProject.resx">
       <DependentUpon>InsertProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonStudent.resx">
+      <DependentUpon>PersonStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Project.resx">
       <DependentUpon>Project.cs</DependentUpon>

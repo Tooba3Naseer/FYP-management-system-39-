@@ -11,46 +11,38 @@ using System.Data.SqlClient;
 
 namespace FYP_Management_System
 {
-    public partial class Project : Form
+    public partial class PersonStudent : Form
     {
         string conURL = "Data Source=(local);Initial Catalog=ProjectA;User ID=sa;Password=9876145";
-        public Project()
+        public PersonStudent()
         {
             InitializeComponent();
         }
-        
         DataTable dataTable;
-        public static int id = -1;
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Project_Load(object sender, EventArgs e)
+        public static int stId = -1;
+        private void PersonStudent_Load(object sender, EventArgs e)
         {
             update();
 
         }
 
-        // this will load the data of table in data grid view
         public void update()
         {
-            
-            dataTable = new DataTable(); 
+            dataTable = new DataTable();
             SqlConnection conn = new SqlConnection(conURL);
             conn.Open();
-            String str = "SELECT * FROM Project";
+            String str = "SELECT Person.Id, FirstName, LastName,Contact, Email,DateOfBirth,(SELECT Value FROM Lookup WHERE Category = 'GENDER' AND Id = Gender) AS 'Gender', RegistrationNo AS 'Registration No' FROM Person Join Student ON Person.Id=Student.Id";
             SqlCommand cmd = new SqlCommand(str, conn);
             SqlDataAdapter sda = new SqlDataAdapter();
             sda.SelectCommand = cmd;
             sda.Fill(dataTable);  // fill the data table with this data
 
-            ProjectData.DataSource = dataTable; // assign to data grid
+            StudentData.DataSource = dataTable; // assign to data grid
+
+
+
 
             
-            
-
-            sda.Update(dataTable);
             conn.Close();
 
             //add button column
@@ -59,7 +51,7 @@ namespace FYP_Management_System
             button.Name = "button";
             button.Text = "DELETE";
             button.UseColumnTextForButtonValue = true;
-            ProjectData.Columns.Add(button);
+            StudentData.Columns.Add(button);
 
             //add button column
             DataGridViewButtonColumn button1 = new DataGridViewButtonColumn();
@@ -67,30 +59,40 @@ namespace FYP_Management_System
             button1.Name = "button1";
             button1.Text = "UPDATE";
             button1.UseColumnTextForButtonValue = true;
-            ProjectData.Columns.Add(button1);
+            StudentData.Columns.Add(button1);
 
             // Configure the details DataGridView so that its columns automatically 
             // adjust their widths when the data changes.
-            ProjectData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+           StudentData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+        }
+
+        private void Create_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Create_Student st = new Create_Student();
+            st.ShowDialog();
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
-        
-
-        private void SearchText_TextChanged(object sender, EventArgs e)
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             DataView dataView = new DataView(dataTable);
-            dataView.RowFilter = string.Format("Title LIKE '%{0}%'", SearchText.Text);
-            ProjectData.DataSource = dataView;
+            dataView.RowFilter = string.Format("[Registration No] LIKE '%{0}%'", textBoxSearch.Text);
+            StudentData.DataSource = dataView;
         }
 
-        private void ProjectData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void StudentData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ProjectData.Rows[e.RowIndex].ReadOnly = true;
+            StudentData.Rows[e.RowIndex].ReadOnly = true;
 
-            
-            int noOfRows = ProjectData.RowCount;
-            if (e.ColumnIndex==3 && e.RowIndex >=0 && e.RowIndex != (noOfRows-1))
+
+            int noOfRows = StudentData.RowCount;
+            if (e.ColumnIndex == 8 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))
             {
                 DialogResult dialogResult = MessageBox.Show("Are you sure that you want to delete it?", "Confirmation", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -117,26 +119,29 @@ namespace FYP_Management_System
                     }
 
 
-                    string cmdText = "DELETE FROM Project WHERE Id = @Id";
+                    string cmdText = "DELETE FROM Student WHERE Id = @Id";
 
                     SqlCommand c = new SqlCommand(cmdText, con);
                     //c.Parameters.Add(new SqlParameter("@Id", textBoxid.Text));
 
-                    int Idy = Convert.ToInt32(ProjectData.Rows[e.RowIndex].Cells[0].Value);
+                    int Idy = Convert.ToInt32(StudentData.Rows[e.RowIndex].Cells[0].Value);
                     c.Parameters.Add(new SqlParameter("@Id", Idy));
                     //Read the command and execute it
 
                     int result = c.ExecuteNonQuery();
                     if (result < 0)
                         MessageBox.Show("Error");
-
+                    string cmdText2 = "DELETE FROM Person WHERE Id = @Id";
+                    SqlCommand c2 = new SqlCommand(cmdText2, con);
+                    c2.Parameters.Add(new SqlParameter("@Id", Idy));
+                    c2.ExecuteNonQuery();
                     // connection closed
                     // show dialog box if added in table of database
-                    
-                   
-                    ProjectData.DataSource = null;
-                    ProjectData.Rows.Clear();
-                    ProjectData.Columns.Clear();
+                    con.Close();
+
+                    StudentData.DataSource = null;
+                    StudentData.Rows.Clear();
+                    StudentData.Columns.Clear();
                     update();
 
                     MessageBox.Show("Successfully Deleted");
@@ -148,30 +153,18 @@ namespace FYP_Management_System
                 }
             }
 
-            if (e.ColumnIndex == 4 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))
+            if (e.ColumnIndex == 9 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))
             {
-                id = Convert.ToInt32(ProjectData.Rows[e.RowIndex].Cells[0].Value);
+                stId = Convert.ToInt32(StudentData.Rows[e.RowIndex].Cells[0].Value);
                 this.Hide();
-                InsertProject create = new InsertProject();
+                Create_Student create = new Create_Student();
+                
                 create.ShowDialog();
                 this.Close();
 
 
             }
             else { }
-        }
-
-        private void Create_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            InsertProject create = new InsertProject();
-            create.ShowDialog();
-            this.Close();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

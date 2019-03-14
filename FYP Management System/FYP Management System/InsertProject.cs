@@ -19,6 +19,8 @@ namespace FYP_Management_System
             InitializeComponent();
         }
         public static int buffer = -1;
+
+        // it is for validation
         private bool isalphaTest(String name)
         {
             if (String.IsNullOrWhiteSpace(name))  // built-in function that checks that is it just null or white space in string
@@ -37,8 +39,6 @@ namespace FYP_Management_System
             SqlConnection con = new SqlConnection(conURL);
 
             // connection opens
-            // purpose of checker it to find whether user enter all data in correct format or not
-            // if not in correct format then show exception and handle in catch secti
             con.Open();
             
             int ID = buffer;
@@ -65,11 +65,10 @@ namespace FYP_Management_System
                             string cmdText = "INSERT INTO Project (Description,Title) VALUES (@Description, @Title)";
 
                             SqlCommand c = new SqlCommand(cmdText, con);
-                            //c.Parameters.Add(new SqlParameter("@Id", textBoxid.Text));
+                            ;
                             c.Parameters.Add(new SqlParameter("@Description", textBoxdes.Text));
                             c.Parameters.Add(new SqlParameter("@Title", textBoxtitle.Text));
-                            //Read the command and execute it
-
+                            //execute it
                             int result = c.ExecuteNonQuery();
                             if (result < 0)
                                 MessageBox.Show("Error");
