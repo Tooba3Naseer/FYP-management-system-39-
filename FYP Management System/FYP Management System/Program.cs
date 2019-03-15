@@ -16,7 +16,7 @@ namespace FYP_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Advisor());
+            Application.Run(new Home());
         }
     }
 }

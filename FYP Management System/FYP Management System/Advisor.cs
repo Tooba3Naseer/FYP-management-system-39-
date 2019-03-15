@@ -73,6 +73,7 @@ namespace FYP_Management_System
             this.Close();
         }
 
+        // searching and filtering on the basis of FirstName
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             DataView dataView = new DataView(dataTable);
@@ -90,7 +91,7 @@ namespace FYP_Management_System
 
 
             int noOfRows = AdvisorData.RowCount;
-            if (e.ColumnIndex == 9 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))
+            if (e.ColumnIndex == 9 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1)) // when click on del button
             {
                 DialogResult dialogResult = MessageBox.Show("Are you sure that you want to delete it?", "Confirmation", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -98,8 +99,7 @@ namespace FYP_Management_System
                     SqlConnection con = new SqlConnection(conURL);
 
                     // connection opens
-                    // purpose of checker it to find whether user enter all data in correct format or not
-                    // if not in correct format then show exception and handle in catch section
+                   
 
 
                     try
@@ -120,11 +120,10 @@ namespace FYP_Management_System
                     string cmdText = "DELETE FROM Advisor WHERE Id = @Id";
 
                     SqlCommand c = new SqlCommand(cmdText, con);
-                    //c.Parameters.Add(new SqlParameter("@Id", textBoxid.Text));
 
                     int Idy = Convert.ToInt32(AdvisorData.Rows[e.RowIndex].Cells[0].Value);
                     c.Parameters.Add(new SqlParameter("@Id", Idy));
-                    //Read the command and execute it
+                    //execute it
 
                     int result = c.ExecuteNonQuery();
                     if (result < 0)
@@ -134,7 +133,7 @@ namespace FYP_Management_System
                     c2.Parameters.Add(new SqlParameter("@Id", Idy));
                     c2.ExecuteNonQuery();
                     // connection closed
-                    // show dialog box if added in table of database
+                   
                     con.Close();
 
                     AdvisorData.DataSource = null;
@@ -142,6 +141,7 @@ namespace FYP_Management_System
                     AdvisorData.Columns.Clear();
                     update();
 
+                    // show dialog box if del
                     MessageBox.Show("Successfully Deleted");
 
                 }
@@ -151,7 +151,7 @@ namespace FYP_Management_System
                 }
             }
 
-            if (e.ColumnIndex == 10 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))
+            if (e.ColumnIndex == 10 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1)) // when click on update button
             {
                 adId = Convert.ToInt32(AdvisorData.Rows[e.RowIndex].Cells[0].Value);
                 this.Hide();

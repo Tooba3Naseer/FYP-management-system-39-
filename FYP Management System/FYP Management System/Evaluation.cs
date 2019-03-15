@@ -62,31 +62,32 @@ namespace FYP_Management_System
                     string cmdText = "DELETE FROM Evaluation WHERE Id = @Id";
 
                     SqlCommand c = new SqlCommand(cmdText, con);
-                    //c.Parameters.Add(new SqlParameter("@Id", textBoxid.Text));
+                   
 
                     int Idy = Convert.ToInt32(EvaluationData.Rows[e.RowIndex].Cells[0].Value);
                     c.Parameters.Add(new SqlParameter("@Id", Idy));
-                    //Read the command and execute it
+                    //execute it
 
                     int result = c.ExecuteNonQuery();
                     if (result < 0)
                         MessageBox.Show("Error");
 
                     // connection closed
-                    // show dialog box if added in table of database
+                    con.Close();
 
-
+                    // update grid after deletion
                     EvaluationData.DataSource = null;
                     EvaluationData.Rows.Clear();
                     EvaluationData.Columns.Clear();
                     update();
 
+                    // show dialog box if added in table of database
                     MessageBox.Show("Successfully Deleted!!");
 
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-                    //do something else
+                    
                 }
             }
 
@@ -145,7 +146,7 @@ namespace FYP_Management_System
             button1.UseColumnTextForButtonValue = true;
             EvaluationData.Columns.Add(button1);
 
-            // Configure the details DataGridView so that its columns automatically 
+            
             // adjust their widths when the data changes.
             EvaluationData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
@@ -160,6 +161,7 @@ namespace FYP_Management_System
             this.Close();
         }
 
+        // searching and filtering on the basis of name
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
 

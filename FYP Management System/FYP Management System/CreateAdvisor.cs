@@ -18,8 +18,11 @@ namespace FYP_Management_System
         {
             InitializeComponent();
         }
+        // require for the purpose of update
         public static int buffer = -1;
 
+
+        // it is for validation of names, names should contains all alphabets and contain no extra spaces
         private bool isalphaTest(String name)
         {
             if (String.IsNullOrWhiteSpace(name))  // built-in function that checks that is it just null or white space in string
@@ -34,6 +37,8 @@ namespace FYP_Management_System
             return true;
         }
 
+
+        // validation for contact no, contact no should contain all digits or - or +
         private bool contactNoValid(String contact)
         {
 
@@ -58,11 +63,10 @@ namespace FYP_Management_System
             SqlConnection con = new SqlConnection(conURL);
 
             // connection opens
-            // purpose of checker it to find whether user enter all data in correct format or not
-            // if not in correct format then show exception and handle in catch secti
+       
             con.Open();
 
-            buffer = Advisor.adId;
+            buffer = Advisor.adId; // get id from advisor form for update
             if (buffer >= 0)
             {
                 String cmdText1 = "SELECT FirstName, LastName,Contact, Email,DateOfBirth FROM Person WHERE Id = @Id";
@@ -95,6 +99,7 @@ namespace FYP_Management_System
             con.Close();
         }
 
+        // when save button clicks
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(conURL);
@@ -104,7 +109,7 @@ namespace FYP_Management_System
 
 
 
-            if (buffer < 0)
+            if (buffer < 0) // for creation of new data
             {
                 try
                 {
@@ -120,8 +125,7 @@ namespace FYP_Management_System
 
 
 
-                            //int id = Convert.ToInt32(textBoxid.Text);
-                            // sql command store in string then call it by passing into sqlcommand object
+                            // getting value of radio button
                             string val = "";
                             bool isCheck = male.Checked;
                             if (isCheck)
@@ -166,7 +170,7 @@ namespace FYP_Management_System
                                 c3.ExecuteNonQuery();
 
                                 // connection closed
-                                // show dialog box if added in table of database
+                                // show dialog box if added
 
                                 MessageBox.Show("Successfully Added");
                                 con.Close();
@@ -202,7 +206,7 @@ namespace FYP_Management_System
 
             }
 
-            else
+            else  // for updation of data
             {
                 try
                 {
@@ -216,37 +220,44 @@ namespace FYP_Management_System
                         bool isCheck2 = female.Checked;
                         if (isCheck2)
                             val = female.Text;
-                        new System.Net.Mail.MailAddress(textBoxEmail.Text);
+                        System.Text.RegularExpressions.Regex expr = new System.Text.RegularExpressions.Regex(@"^[a-zA-Z][\w\.-]{2,28}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
+                        if (expr.IsMatch(textBoxEmail.Text))
+                        {
 
-                        string cmdText2 = "Update Person SET FirstName = @FirstName ,LastName =@LastName , Contact = @Contact, Email = @Email, DateOfBirth = @DateOfBirth, Gender = (SELECT Id FROM Lookup WHERE Category = 'Gender' AND Value = @Value) WHERE Id = @Id";
-                        SqlCommand c2 = new SqlCommand(cmdText2, con);
-                        c2.Parameters.Add(new SqlParameter("@Id", buffer));
-                        c2.Parameters.Add(new SqlParameter("@FirstName", textBoxName.Text));
-                        c2.Parameters.Add(new SqlParameter("@LastName", textBoxLast.Text));
-                        c2.Parameters.Add(new SqlParameter("@Contact", textBoxContact.Text));
+                            string cmdText2 = "Update Person SET FirstName = @FirstName ,LastName =@LastName , Contact = @Contact, Email = @Email, DateOfBirth = @DateOfBirth, Gender = (SELECT Id FROM Lookup WHERE Category = 'Gender' AND Value = @Value) WHERE Id = @Id";
+                            SqlCommand c2 = new SqlCommand(cmdText2, con);
+                            c2.Parameters.Add(new SqlParameter("@Id", buffer));
+                            c2.Parameters.Add(new SqlParameter("@FirstName", textBoxName.Text));
+                            c2.Parameters.Add(new SqlParameter("@LastName", textBoxLast.Text));
+                            c2.Parameters.Add(new SqlParameter("@Contact", textBoxContact.Text));
 
-                        c2.Parameters.Add(new SqlParameter("@Email", textBoxEmail.Text));
+                            c2.Parameters.Add(new SqlParameter("@Email", textBoxEmail.Text));
 
 
 
-                        c2.Parameters.Add(new SqlParameter("@DateOfBirth", dateTimePicker1.Text));
+                            c2.Parameters.Add(new SqlParameter("@DateOfBirth", dateTimePicker1.Text));
 
-                        c2.Parameters.Add(new SqlParameter("@Value", val));
+                            c2.Parameters.Add(new SqlParameter("@Value", val));
 
-                        c2.ExecuteNonQuery();
+                            c2.ExecuteNonQuery();
 
-                        string cmdText3 = "Update Advisor SET Designation = (SELECT Id FROM Lookup WHERE Category = 'DESIGNATION' AND Value = @Value), Salary = @Salary where Id = @Id";
-                        SqlCommand c3 = new SqlCommand(cmdText3, con);
-                        c3.Parameters.Add(new SqlParameter("@Id", buffer));
-                        c3.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
-                        c3.Parameters.Add(new SqlParameter("@Salary", textBoxSalary.Text));
-                        MessageBox.Show("Successfully Updated!!");
+                            string cmdText3 = "Update Advisor SET Designation = (SELECT Id FROM Lookup WHERE Category = 'DESIGNATION' AND Value = @Value), Salary = @Salary where Id = @Id";
+                            SqlCommand c3 = new SqlCommand(cmdText3, con);
+                            c3.Parameters.Add(new SqlParameter("@Id", buffer));
+                            c3.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
+                            c3.Parameters.Add(new SqlParameter("@Salary", textBoxSalary.Text));
+                            MessageBox.Show("Successfully Updated!!");
 
-                        con.Close();
-                        this.Hide();
-                        Advisor datap = new Advisor();
-                        datap.ShowDialog();
-                        this.Close(); // close the form
+                            con.Close();
+                            this.Hide();
+                            Advisor datap = new Advisor();
+                            datap.ShowDialog();
+                            this.Close(); // close the form
+                        }
+                        else
+                        {
+                            throw new ArgumentNullException();
+                        }
                     }
                     else
                     {

@@ -18,8 +18,11 @@ namespace FYP_Management_System
         {
             InitializeComponent();
         }
+        // require for the purpose of update
         public static int buffer = -1;
 
+
+        // it is for validation of names, names should contains all alphabets and contain no extra spaces
         private bool isalphaTest(String name)
         {
             if (String.IsNullOrWhiteSpace(name))  // built-in function that checks that is it just null or white space in string
@@ -38,7 +41,7 @@ namespace FYP_Management_System
         {
 
         }
-
+        // when click on save button
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(conURL);
@@ -48,7 +51,7 @@ namespace FYP_Management_System
 
             int ID = buffer;
 
-            if (ID < 0)
+            if (ID < 0) // insertion
             {
                 try
                 {
@@ -64,8 +67,8 @@ namespace FYP_Management_System
 
 
 
-                            //int id = Convert.ToInt32(textBoxid.Text);
-                            // sql command store in string then call it by passing into sqlcommand object
+                           
+                            // command store in string then execute it by passing into sqlcommand object
 
                             string cmdText = "INSERT INTO Evaluation (Name, TotalMarks, TotalWeightage) VALUES (@Name, @TotalMarks, @TotalWeightage)";
 
@@ -79,9 +82,10 @@ namespace FYP_Management_System
                             if (result < 0)
                                 MessageBox.Show("Error");
 
-                            // connection closed
+                          
                             // show dialog box if added in table of database
                             MessageBox.Show("Successfully Added");
+                            // connection closed
                             con.Close();
                             this.Hide();
                             Evaluation datap = new Evaluation();
@@ -103,7 +107,7 @@ namespace FYP_Management_System
 
             }
 
-            else
+            else // updation
             {
                 try
                 {
@@ -146,12 +150,11 @@ namespace FYP_Management_System
             SqlConnection con = new SqlConnection(conURL);
 
             // connection opens
-            // purpose of checker it to find whether user enter all data in correct format or not
-            // if not in correct format then show exception and handle in catch secti
+            
             con.Open();
 
-            buffer = Evaluation.id;
-            if (buffer >= 0)
+            buffer = Evaluation.id; // get evalaution id from evaluation form for updation on that id
+            if (buffer >= 0)  // for updation show all previous data in textboxes
             {
                 string cmdText1 = "SELECT Name, TotalMarks, TotalWeightage FROM Evaluation WHERE Id = @Id";
                 SqlCommand c1 = new SqlCommand(cmdText1, con);

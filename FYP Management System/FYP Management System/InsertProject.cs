@@ -20,7 +20,7 @@ namespace FYP_Management_System
         }
         public static int buffer = -1;
 
-        // it is for validation
+        // it is for validation of names, names should contains all alphabets and contain no extra spaces
         private bool isalphaTest(String name)
         {
             if (String.IsNullOrWhiteSpace(name))  // built-in function that checks that is it just null or white space in string
@@ -59,8 +59,8 @@ namespace FYP_Management_System
 
 
 
-                            //int id = Convert.ToInt32(textBoxid.Text);
-                            // sql command store in string then call it by passing into sqlcommand object
+
+                            // command store in string then execute it by passing into sqlcommand object
 
                             string cmdText = "INSERT INTO Project (Description,Title) VALUES (@Description, @Title)";
 
@@ -73,9 +73,14 @@ namespace FYP_Management_System
                             if (result < 0)
                                 MessageBox.Show("Error");
 
-                            // connection closed
+                            
                             // show dialog box if added in table of database
                             MessageBox.Show("Successfully Added");
+                            con.Close();
+                            this.Hide();
+                            Project datap = new Project();
+                            datap.ShowDialog();
+                            this.Close(); // close the form
                         }
                         else
                         {
@@ -108,6 +113,12 @@ namespace FYP_Management_System
                         c2.Parameters.Add(new SqlParameter("@Title", textBoxtitle.Text));
                         c2.ExecuteNonQuery();
                         MessageBox.Show("Successfully Updated");
+                        con.Close();
+                        this.Hide();
+                        Project datap = new Project();
+                        datap.ShowDialog();
+                        this.Close(); // close the form
+
                     }
                     else
                     {
@@ -122,12 +133,7 @@ namespace FYP_Management_System
 
             }
 
-            con.Close();
-            this.Hide();
-            Project datap = new Project();
-            datap.ShowDialog();
-            this.Close(); // close the form
-
+       
         }
 
         private void InsertProject_Load(object sender, EventArgs e)

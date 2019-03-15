@@ -19,7 +19,7 @@ namespace FYP_Management_System
             InitializeComponent();
         }
         DataTable dataTable;
-        public static int stId = -1;
+        public static int stId = -1;  
         private void PersonStudent_Load(object sender, EventArgs e)
         {
             update();
@@ -61,7 +61,7 @@ namespace FYP_Management_System
             button1.UseColumnTextForButtonValue = true;
             StudentData.Columns.Add(button1);
 
-            // Configure the details DataGridView so that its columns automatically 
+            
             // adjust their widths when the data changes.
            StudentData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
@@ -78,25 +78,30 @@ namespace FYP_Management_System
         {
 
         }
-
+        
+        // searching and filtering on the basis of reg no
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             DataView dataView = new DataView(dataTable);
             dataView.RowFilter = string.Format("[Registration No] LIKE '%{0}%'", textBoxSearch.Text);
+
             StudentData.DataSource = dataView;
+           
+
         }
 
         private void StudentData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+            
             StudentData.DataSource = null;
             StudentData.Rows.Clear();
             StudentData.Columns.Clear();
             update();
+
             StudentData.Rows[e.RowIndex].ReadOnly = true;
-
-
             int noOfRows = StudentData.RowCount;
-            if (e.ColumnIndex == 8 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))
+            if (e.ColumnIndex == 8 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1)) // when click on del button
             {
                 DialogResult dialogResult = MessageBox.Show("Are you sure that you want to delete it?", "Confirmation", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -104,8 +109,7 @@ namespace FYP_Management_System
                     SqlConnection con = new SqlConnection(conURL);
 
                     // connection opens
-                    // purpose of checker it to find whether user enter all data in correct format or not
-                    // if not in correct format then show exception and handle in catch section
+                    
 
 
                     try
@@ -126,11 +130,11 @@ namespace FYP_Management_System
                     string cmdText = "DELETE FROM Student WHERE Id = @Id";
 
                     SqlCommand c = new SqlCommand(cmdText, con);
-                    //c.Parameters.Add(new SqlParameter("@Id", textBoxid.Text));
+                    
 
                     int Idy = Convert.ToInt32(StudentData.Rows[e.RowIndex].Cells[0].Value);
                     c.Parameters.Add(new SqlParameter("@Id", Idy));
-                    //Read the command and execute it
+                    // execute it
 
                     int result = c.ExecuteNonQuery();
                     if (result < 0)
@@ -140,7 +144,7 @@ namespace FYP_Management_System
                     c2.Parameters.Add(new SqlParameter("@Id", Idy));
                     c2.ExecuteNonQuery();
                     // connection closed
-                    // show dialog box if added in table of database
+                    
                     con.Close();
 
                     StudentData.DataSource = null;
@@ -157,7 +161,7 @@ namespace FYP_Management_System
                 }
             }
 
-            if (e.ColumnIndex == 9 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))
+            if (e.ColumnIndex == 9 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1)) // when click on update button
             {
                 stId = Convert.ToInt32(StudentData.Rows[e.RowIndex].Cells[0].Value);
                 this.Hide();

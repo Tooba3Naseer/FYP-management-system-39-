@@ -69,14 +69,14 @@ namespace FYP_Management_System
             button1.UseColumnTextForButtonValue = true;
             ProjectData.Columns.Add(button1);
 
-            // Configure the details DataGridView so that its columns automatically 
+            
             // adjust their widths when the data changes.
             ProjectData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
         }
 
         
-
+        // searching and filtering on the basis of title
         private void SearchText_TextChanged(object sender, EventArgs e)
         {
             DataView dataView = new DataView(dataTable);
@@ -103,8 +103,7 @@ namespace FYP_Management_System
                     SqlConnection con = new SqlConnection(conURL);
 
                     // connection opens
-                    // purpose of checker it to find whether user enter all data in correct format or not
-                    // if not in correct format then show exception and handle in catch section
+                  
 
 
                     try
@@ -125,24 +124,25 @@ namespace FYP_Management_System
                     string cmdText = "DELETE FROM Project WHERE Id = @Id";
 
                     SqlCommand c = new SqlCommand(cmdText, con);
-                    //c.Parameters.Add(new SqlParameter("@Id", textBoxid.Text));
+                   
 
                     int Idy = Convert.ToInt32(ProjectData.Rows[e.RowIndex].Cells[0].Value);
                     c.Parameters.Add(new SqlParameter("@Id", Idy));
-                    //Read the command and execute it
+                    //execute it
 
                     int result = c.ExecuteNonQuery();
                     if (result < 0)
                         MessageBox.Show("Error");
 
                     // connection closed
-                    // show dialog box if added in table of database
-                    
-                   
+                    con.Close();
+                    // update the grid after deletion
                     ProjectData.DataSource = null;
                     ProjectData.Rows.Clear();
                     ProjectData.Columns.Clear();
                     update();
+
+                    // show dialog box if added in table of database
 
                     MessageBox.Show("Successfully Deleted");
 
@@ -166,6 +166,7 @@ namespace FYP_Management_System
             else { }
         }
 
+        
         private void Create_Click(object sender, EventArgs e)
         {
             this.Hide();
