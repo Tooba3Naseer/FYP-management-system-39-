@@ -63,7 +63,7 @@ namespace FYP_Management_System
 
             
             // adjust their widths when the data changes.
-           StudentData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+           //StudentData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void Create_Click(object sender, EventArgs e)

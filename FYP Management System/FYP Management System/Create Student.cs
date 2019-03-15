@@ -43,7 +43,7 @@ namespace FYP_Management_System
         {
             bool check = false;
             int length = regno.Length;
-            if (length == 9 || length == 10 || length > 11)  // it should have these lengths
+            if (length == 9 || length == 10 || length >= 11)  // it should have these lengths
             {
                 for (int i = 0; i < 4; i++)
                 {
@@ -228,7 +228,7 @@ namespace FYP_Management_System
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Enter Name, Email, RegNo in correct Format!! RegNo pattern be like '2016-CE-72' or 2016-IME-999' Name should be all alphabets, no extra spaces");
+                    MessageBox.Show("Enter Name, Email, RegNo in correct Format!! RegNo pattern be like '2016-CE-72' or 2016-IME-999' Name should be all alphabets, no extra spaces. email should have at least 4 chars before @. contact should have digits");
                 }
 
             }
@@ -238,7 +238,7 @@ namespace FYP_Management_System
                 try
                 {
 
-                    if (isalphaTest(textBoxName.Text) && (String.IsNullOrEmpty(textBoxLast.Text) || (!String.IsNullOrEmpty(textBoxLast.Text) && (isalphaTest(textBoxLast.Text)))) && isRegNovalid(textBoxRegNo.Text) && (String.IsNullOrEmpty(textBoxContact.Text) || (!String.IsNullOrEmpty(textBoxContact.Text) && contactNoValid(textBoxContact.Text))))
+                    if (isalphaTest(textBoxName.Text) && (String.IsNullOrEmpty(textBoxLast.Text) || (!String.IsNullOrEmpty(textBoxLast.Text) && (isalphaTest(textBoxLast.Text)))) && isRegNovalid(textBoxRegNo.Text.ToString()) && (String.IsNullOrEmpty(textBoxContact.Text) || (!String.IsNullOrEmpty(textBoxContact.Text) && contactNoValid(textBoxContact.Text))))
                     {
                         string val = "";
                         bool isCheck = male.Checked;
@@ -250,8 +250,9 @@ namespace FYP_Management_System
                         System.Text.RegularExpressions.Regex expr = new System.Text.RegularExpressions.Regex(@"^[a-zA-Z][\w\.-]{2,28}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
                         if (expr.IsMatch(textBoxEmail.Text))
                         {
+                           
 
-                            string cmdText2 = "Update Person SET FirstName = @FirstName ,LastName =@LastName , Contact = @Contact, Email = @Email, DateOfBirth = @DateOfBirth, Gender = (SELECT Id FROM Lookup WHERE Category = 'Gender' AND Value = @Value) WHERE Id = @Id";
+                            string cmdText2 = "Update Person SET FirstName = @FirstName ,LastName =@LastName , Contact = @Contact, Email = @Email, DateOfBirth = @DateOfBirth, Gender = (SELECT Id FROM Lookup WHERE Category = 'GENDER' AND Value = @Value) WHERE Id = @Id";
                             SqlCommand c2 = new SqlCommand(cmdText2, con);
                             c2.Parameters.Add(new SqlParameter("@Id", buffer));
                             c2.Parameters.Add(new SqlParameter("@FirstName", textBoxName.Text));
@@ -268,10 +269,17 @@ namespace FYP_Management_System
 
                             c2.ExecuteNonQuery();
 
-                            string cmdText3 = "Update Student SET RegistrationNo = @RegistrationNo where Id = @Id";
+
+                            string cmdText3 = "Update Student SET RegistrationNo = @RegistrationNo WHERE Id = @Id";
                             SqlCommand c3 = new SqlCommand(cmdText3, con);
                             c3.Parameters.Add(new SqlParameter("@Id", buffer));
                             c3.Parameters.Add(new SqlParameter("@RegistrationNo", textBoxRegNo.Text));
+
+                            c3.ExecuteNonQuery();
+
+
+
+
                             MessageBox.Show("Successfully Updated!!");
                             con.Close();
                             this.Hide();
@@ -295,7 +303,7 @@ namespace FYP_Management_System
 
                 catch (Exception)
                 {
-                    MessageBox.Show("Enter Name, Email, RegNo in correct Format!! RegNo pattern be like '2016-CE-72' or 2016-IME-999' Name should be all alphabets, no extra spaces");
+                    MessageBox.Show("Enter Name, Email, RegNo in correct Format!! RegNo pattern be like '2016-CE-72' or 2016-IME-999' Name should be all alphabets, no extra spaces. email should have at least 4 chars before @. contact should have digits");
                 }
             }
 

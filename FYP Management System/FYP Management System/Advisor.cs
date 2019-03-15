@@ -62,7 +62,7 @@ namespace FYP_Management_System
 
             // Configure the details DataGridView so that its columns automatically 
             // adjust their widths when the data changes.
-            AdvisorData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+           // AdvisorData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void Create_Click(object sender, EventArgs e)

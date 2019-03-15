@@ -63,7 +63,7 @@
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstName.Location = new System.Drawing.Point(3, 0);
             this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(100, 26);
+            this.FirstName.Size = new System.Drawing.Size(126, 26);
             this.FirstName.TabIndex = 0;
             this.FirstName.Text = "First Name";
             // 
@@ -76,7 +76,7 @@
             this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastName.Location = new System.Drawing.Point(3, 26);
             this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(100, 32);
+            this.LastName.Size = new System.Drawing.Size(126, 32);
             this.LastName.TabIndex = 1;
             this.LastName.Text = "Last Name";
             this.LastName.Click += new System.EventHandler(this.label2_Click);
@@ -90,7 +90,7 @@
             this.Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contact.Location = new System.Drawing.Point(3, 58);
             this.Contact.Name = "Contact";
-            this.Contact.Size = new System.Drawing.Size(100, 38);
+            this.Contact.Size = new System.Drawing.Size(126, 38);
             this.Contact.TabIndex = 2;
             this.Contact.Text = "Contact";
             // 
@@ -103,7 +103,7 @@
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.Location = new System.Drawing.Point(3, 96);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(100, 39);
+            this.Email.Size = new System.Drawing.Size(126, 39);
             this.Email.TabIndex = 3;
             this.Email.Text = "Email";
             // 
@@ -116,7 +116,7 @@
             this.DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DOB.Location = new System.Drawing.Point(3, 135);
             this.DOB.Name = "DOB";
-            this.DOB.Size = new System.Drawing.Size(100, 36);
+            this.DOB.Size = new System.Drawing.Size(126, 36);
             this.DOB.TabIndex = 4;
             this.DOB.Text = "Data of Birth";
             // 
@@ -129,7 +129,7 @@
             this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gender.Location = new System.Drawing.Point(3, 171);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(100, 24);
+            this.Gender.Size = new System.Drawing.Size(126, 24);
             this.Gender.TabIndex = 5;
             this.Gender.Text = "Gender";
             // 
@@ -142,7 +142,7 @@
             this.regNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regNo.Location = new System.Drawing.Point(3, 235);
             this.regNo.Name = "regNo";
-            this.regNo.Size = new System.Drawing.Size(100, 31);
+            this.regNo.Size = new System.Drawing.Size(126, 31);
             this.regNo.TabIndex = 6;
             this.regNo.Text = "Registration No";
             // 
@@ -151,9 +151,9 @@
             this.textBoxRegNo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxRegNo.Location = new System.Drawing.Point(109, 238);
+            this.textBoxRegNo.Location = new System.Drawing.Point(135, 238);
             this.textBoxRegNo.Name = "textBoxRegNo";
-            this.textBoxRegNo.Size = new System.Drawing.Size(309, 20);
+            this.textBoxRegNo.Size = new System.Drawing.Size(386, 20);
             this.textBoxRegNo.TabIndex = 7;
             // 
             // textBoxEmail
@@ -161,9 +161,9 @@
             this.textBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxEmail.Location = new System.Drawing.Point(109, 99);
+            this.textBoxEmail.Location = new System.Drawing.Point(135, 99);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(309, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(386, 20);
             this.textBoxEmail.TabIndex = 10;
             // 
             // textBoxContact
@@ -171,9 +171,9 @@
             this.textBoxContact.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxContact.Location = new System.Drawing.Point(109, 61);
+            this.textBoxContact.Location = new System.Drawing.Point(135, 61);
             this.textBoxContact.Name = "textBoxContact";
-            this.textBoxContact.Size = new System.Drawing.Size(309, 20);
+            this.textBoxContact.Size = new System.Drawing.Size(386, 20);
             this.textBoxContact.TabIndex = 11;
             // 
             // textBoxLast
@@ -181,9 +181,9 @@
             this.textBoxLast.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLast.Location = new System.Drawing.Point(109, 29);
+            this.textBoxLast.Location = new System.Drawing.Point(135, 29);
             this.textBoxLast.Name = "textBoxLast";
-            this.textBoxLast.Size = new System.Drawing.Size(309, 20);
+            this.textBoxLast.Size = new System.Drawing.Size(386, 20);
             this.textBoxLast.TabIndex = 12;
             // 
             // textBoxName
@@ -191,9 +191,9 @@
             this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxName.Location = new System.Drawing.Point(109, 3);
+            this.textBoxName.Location = new System.Drawing.Point(135, 3);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(309, 20);
+            this.textBoxName.Size = new System.Drawing.Size(386, 20);
             this.textBoxName.TabIndex = 13;
             // 
             // button1
@@ -227,16 +227,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.CustomFormat = "";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(109, 138);
+            this.dateTimePicker1.Location = new System.Drawing.Point(135, 138);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(309, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(386, 20);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // male
             // 
             this.male.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.male.AutoSize = true;
-            this.male.Location = new System.Drawing.Point(109, 174);
+            this.male.Location = new System.Drawing.Point(135, 174);
             this.male.Name = "male";
             this.male.Size = new System.Drawing.Size(48, 17);
             this.male.TabIndex = 17;
@@ -248,7 +248,7 @@
             // 
             this.female.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.female.AutoSize = true;
-            this.female.Location = new System.Drawing.Point(109, 206);
+            this.female.Location = new System.Drawing.Point(135, 206);
             this.female.Name = "female";
             this.female.Size = new System.Drawing.Size(59, 17);
             this.female.TabIndex = 18;
@@ -263,10 +263,11 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LastName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.regNo, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.textBoxLast, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.Gender, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.textBoxContact, 1, 2);
@@ -278,7 +279,6 @@
             this.tableLayoutPanel1.Controls.Add(this.female, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.FirstName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBoxRegNo, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.regNo, 0, 7);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 59);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -290,7 +290,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(631, 266);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 266);
             this.tableLayoutPanel1.TabIndex = 19;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 

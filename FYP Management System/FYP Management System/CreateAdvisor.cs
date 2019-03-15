@@ -201,7 +201,7 @@ namespace FYP_Management_System
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Enter Name, Email, Salary in correct Format!!  Name should be all alphabets, no extra spaces ");
+                    MessageBox.Show("Enter Name, Email, Salary in correct Format!!  Name should be all alphabets, no extra spaces. email should have at least 4 chars before @ . contact should have digits");
                 }
 
             }
@@ -246,6 +246,7 @@ namespace FYP_Management_System
                             c3.Parameters.Add(new SqlParameter("@Id", buffer));
                             c3.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
                             c3.Parameters.Add(new SqlParameter("@Salary", textBoxSalary.Text));
+                            c3.ExecuteNonQuery();
                             MessageBox.Show("Successfully Updated!!");
 
                             con.Close();
@@ -269,7 +270,7 @@ namespace FYP_Management_System
 
                 catch (Exception)
                 {
-                    MessageBox.Show("Enter Name, Email, Salary in correct Format!!  Name should be all alphabets, no extra spaces and Enter Name, Email, Designation must!!");
+                    MessageBox.Show("Enter Name, Email, Salary in correct Format!!  Name should be all alphabets, no extra spaces and Enter Name, Email, Designation must. email should have at least 4 chars before @. contact should have digits!!");
                 }
             }
 
