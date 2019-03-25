@@ -48,5 +48,11 @@ namespace FYP_Management_System
             st.ShowDialog();
           
         }
+
+        private void buttonSg_Click(object sender, EventArgs e)
+        {
+            StudentgroupManagment sg = new StudentgroupManagment();
+            sg.ShowDialog();
+        }
     }
 }

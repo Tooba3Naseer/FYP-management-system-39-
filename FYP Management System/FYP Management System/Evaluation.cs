@@ -24,10 +24,8 @@ namespace FYP_Management_System
         public static int id = -1;
         private void EvaluationData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            EvaluationData.DataSource = null;
-            EvaluationData.Rows.Clear();
-            EvaluationData.Columns.Clear();
-            update();
+           
+
             EvaluationData.Rows[e.RowIndex].ReadOnly = true;
 
 
@@ -168,7 +166,10 @@ namespace FYP_Management_System
             DataView dataView = new DataView(dataTable);
             dataView.RowFilter = string.Format("Name LIKE '%{0}%'", textBoxSearch.Text);
             EvaluationData.DataSource = dataView;
-            
+         
+
+
+
         }
 
         private void textBoxSearch_Validated(object sender, EventArgs e)

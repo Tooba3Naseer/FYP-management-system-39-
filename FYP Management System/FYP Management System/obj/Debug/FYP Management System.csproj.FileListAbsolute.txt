@@ -2,17 +2,21 @@ F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\b
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\FYP Management System.exe
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\FYP Management System.pdb
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csprojAssemblyReference.cache
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Advisor.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Evaluation.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Student.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.CreateAdvisor.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Evaluation.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Home.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.InsertProject.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.PersonStudent.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Project.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Properties.Resources.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.GenerateResource.cache
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.CoreCompileInputs.cache
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.exe
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.pdb
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Project.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.InsertProject.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Student.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.PersonStudent.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Evaluation.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Evaluation.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Advisor.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.CreateAdvisor.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Home.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AddStudent.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.FormationOfGroups.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.GroupStudent.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.StudentgroupManagment.resources
