@@ -31,8 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Description = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxRegNo = new System.Windows.Forms.TextBox();
@@ -74,46 +72,18 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Description, 0, 2);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxRegNo, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(50, 115);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.76191F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(694, 162);
             this.tableLayoutPanel1.TabIndex = 26;
-            // 
-            // Description
-            // 
-            this.Description.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Description.AutoSize = true;
-            this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Description.Location = new System.Drawing.Point(3, 110);
-            this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(107, 52);
-            this.Description.TabIndex = 1;
-            this.Description.Text = "Assignment Date";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(116, 113);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(330, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 3, 25, 23, 23, 34, 0);
             // 
             // label2
             // 
@@ -124,7 +94,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 51);
+            this.label2.Size = new System.Drawing.Size(107, 103);
             this.label2.TabIndex = 3;
             this.label2.Text = "Registration No";
             // 
@@ -135,7 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 51);
+            this.label3.Location = new System.Drawing.Point(3, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 59);
             this.label3.TabIndex = 4;
@@ -148,7 +118,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRegNo.Location = new System.Drawing.Point(116, 3);
             this.textBoxRegNo.Name = "textBoxRegNo";
-            this.textBoxRegNo.Size = new System.Drawing.Size(330, 20);
+            this.textBoxRegNo.Size = new System.Drawing.Size(329, 20);
             this.textBoxRegNo.TabIndex = 14;
             // 
             // comboBox1
@@ -160,9 +130,9 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.comboBox1.Location = new System.Drawing.Point(116, 54);
+            this.comboBox1.Location = new System.Drawing.Point(116, 106);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(330, 21);
+            this.comboBox1.Size = new System.Drawing.Size(329, 21);
             this.comboBox1.TabIndex = 20;
             // 
             // panel2
@@ -185,6 +155,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cancel
             // 
@@ -196,6 +167,7 @@
             this.Cancel.TabIndex = 15;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // AddStudent
             // 
@@ -207,6 +179,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddStudent";
             this.Text = "AddStudent";
+            this.Load += new System.EventHandler(this.AddStudent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -221,8 +194,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label Description;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxRegNo;

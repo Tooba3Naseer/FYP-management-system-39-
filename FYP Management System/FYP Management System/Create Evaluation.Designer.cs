@@ -108,7 +108,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LastName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxMarks, 1, 1);
@@ -131,7 +131,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxName.Location = new System.Drawing.Point(109, 3);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(308, 20);
+            this.textBoxName.Size = new System.Drawing.Size(307, 20);
             this.textBoxName.TabIndex = 13;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
@@ -155,7 +155,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxMarks.Location = new System.Drawing.Point(109, 61);
             this.textBoxMarks.Name = "textBoxMarks";
-            this.textBoxMarks.Size = new System.Drawing.Size(308, 20);
+            this.textBoxMarks.Size = new System.Drawing.Size(307, 20);
             this.textBoxMarks.TabIndex = 12;
             // 
             // textBoxWeghtage
@@ -165,7 +165,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxWeghtage.Location = new System.Drawing.Point(109, 113);
             this.textBoxWeghtage.Name = "textBoxWeghtage";
-            this.textBoxWeghtage.Size = new System.Drawing.Size(308, 20);
+            this.textBoxWeghtage.Size = new System.Drawing.Size(307, 20);
             this.textBoxWeghtage.TabIndex = 11;
             // 
             // Contact

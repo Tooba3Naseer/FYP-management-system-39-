@@ -71,15 +71,15 @@
             this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search.Location = new System.Drawing.Point(12, 24);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(55, 18);
+            this.search.Size = new System.Drawing.Size(129, 18);
             this.search.TabIndex = 2;
-            this.search.Text = "Search";
+            this.search.Text = "Search by Reg No";
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(87, 22);
+            this.textBoxSearch.Location = new System.Drawing.Point(147, 24);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(154, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(186, 20);
             this.textBoxSearch.TabIndex = 3;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 

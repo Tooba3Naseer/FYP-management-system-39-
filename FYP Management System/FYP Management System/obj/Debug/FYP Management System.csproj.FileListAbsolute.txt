@@ -17,6 +17,4 @@ F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\o
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.exe
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.pdb
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AddStudent.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.FormationOfGroups.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.GroupStudent.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.StudentgroupManagment.resources

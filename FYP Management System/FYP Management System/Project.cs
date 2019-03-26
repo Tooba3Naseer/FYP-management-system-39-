@@ -79,19 +79,64 @@ namespace FYP_Management_System
         // searching and filtering on the basis of title
         private void SearchText_TextChanged(object sender, EventArgs e)
         {
-            DataView dataView = new DataView(dataTable);
-            dataView.RowFilter = string.Format("Title LIKE '%{0}%'", SearchText.Text);
-            ProjectData.DataSource = dataView;
-            
+            if (!String.IsNullOrEmpty(SearchText.Text))
+            {
+                ProjectData.DataSource = null;
+                ProjectData.Rows.Clear();
+                ProjectData.Columns.Clear();
+
+                dataTable = new DataTable();
+                SqlConnection conn = new SqlConnection(conURL);
+                conn.Open();
+                String str = "SELECT * FROM Project where Title = @Title";
+                SqlCommand cmd = new SqlCommand(str, conn);
+                cmd.Parameters.Add(new SqlParameter("@Title", SearchText.Text));
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                sda.Fill(dataTable);  // fill the data table with this data
+
+                ProjectData.DataSource = dataTable; // assign to data grid
+
+
+
+
+                sda.Update(dataTable);
+                conn.Close();
+
+                //add button column
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                button.HeaderText = "Delete Data";
+                button.Name = "button";
+                button.Text = "DELETE";
+                button.UseColumnTextForButtonValue = true;
+                ProjectData.Columns.Add(button);
+
+                //add button column
+                DataGridViewButtonColumn button1 = new DataGridViewButtonColumn();
+                button1.HeaderText = "Update Data";
+                button1.Name = "button1";
+                button1.Text = "UPDATE";
+                button1.UseColumnTextForButtonValue = true;
+                ProjectData.Columns.Add(button1);
+
+
+                // adjust their widths when the data changes.
+                ProjectData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            }
+            else
+            {
+                ProjectData.DataSource = null;
+                ProjectData.Rows.Clear();
+                ProjectData.Columns.Clear();
+                update();
+            }
+
         }
 
         private void ProjectData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            ProjectData.DataSource = null;
-            ProjectData.Rows.Clear();
-            ProjectData.Columns.Clear();
-            update();
             ProjectData.Rows[e.RowIndex].ReadOnly = true;
 
             int noOfRows = ProjectData.RowCount;

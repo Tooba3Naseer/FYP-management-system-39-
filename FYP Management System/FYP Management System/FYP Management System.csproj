@@ -82,18 +82,6 @@
     <Compile Include="Evaluation.Designer.cs">
       <DependentUpon>Evaluation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormationOfGroups.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormationOfGroups.Designer.cs">
-      <DependentUpon>FormationOfGroups.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GroupStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GroupStudent.Designer.cs">
-      <DependentUpon>GroupStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,12 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Evaluation.resx">
       <DependentUpon>Evaluation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormationOfGroups.resx">
-      <DependentUpon>FormationOfGroups.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GroupStudent.resx">
-      <DependentUpon>GroupStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

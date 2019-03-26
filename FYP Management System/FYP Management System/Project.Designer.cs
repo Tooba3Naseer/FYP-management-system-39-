@@ -60,16 +60,16 @@
             this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search.Location = new System.Drawing.Point(17, 19);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(60, 20);
+            this.search.Size = new System.Drawing.Size(113, 20);
             this.search.TabIndex = 1;
-            this.search.Text = "Search";
+            this.search.Text = "Search by Title";
             this.search.Click += new System.EventHandler(this.label1_Click);
             // 
             // SearchText
             // 
-            this.SearchText.Location = new System.Drawing.Point(94, 18);
+            this.SearchText.Location = new System.Drawing.Point(136, 18);
             this.SearchText.Name = "SearchText";
-            this.SearchText.Size = new System.Drawing.Size(179, 20);
+            this.SearchText.Size = new System.Drawing.Size(188, 20);
             this.SearchText.TabIndex = 2;
             this.SearchText.TextChanged += new System.EventHandler(this.SearchText_TextChanged);
             // 

@@ -82,22 +82,60 @@ namespace FYP_Management_System
         // searching and filtering on the basis of reg no
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            DataView dataView = new DataView(dataTable);
-            dataView.RowFilter = string.Format("[Registration No] LIKE '%{0}%'", textBoxSearch.Text);
+            if (!String.IsNullOrEmpty(textBoxSearch.Text))
+            {
+                StudentData.DataSource = null;
+                StudentData.Rows.Clear();
+                StudentData.Columns.Clear();
+                
+                dataTable = new DataTable();
+                SqlConnection conn = new SqlConnection(conURL);
+                conn.Open();
+                String str = "SELECT Person.Id, FirstName, LastName,Contact, Email,DateOfBirth,(SELECT Value FROM Lookup WHERE Category = 'GENDER' AND Id = Gender) AS 'Gender', RegistrationNo AS 'Registration No' FROM Person Join Student ON Person.Id=Student.Id where RegistrationNo = @RegistrationNo";
+                SqlCommand cmd = new SqlCommand(str, conn);
+                cmd.Parameters.Add(new SqlParameter("@RegistrationNo", textBoxSearch.Text));
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                sda.Fill(dataTable);  // fill the data table with this data
 
-            StudentData.DataSource = dataView;
-           
+                StudentData.DataSource = dataTable; // assign to data grid
+
+
+
+
+
+                conn.Close();
+
+                //add button column
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                button.HeaderText = "Delete Data";
+                button.Name = "button";
+                button.Text = "DELETE";
+                button.UseColumnTextForButtonValue = true;
+                StudentData.Columns.Add(button);
+
+                //add button column
+                DataGridViewButtonColumn button1 = new DataGridViewButtonColumn();
+                button1.HeaderText = "Update Data";
+                button1.Name = "button1";
+                button1.Text = "UPDATE";
+                button1.UseColumnTextForButtonValue = true;
+                StudentData.Columns.Add(button1);
+            }
+            else
+            {
+                StudentData.DataSource = null;
+                StudentData.Rows.Clear();
+                StudentData.Columns.Clear();
+                update();
+            }
+
 
         }
 
         private void StudentData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            
-            StudentData.DataSource = null;
-            StudentData.Rows.Clear();
-            StudentData.Columns.Clear();
-            update();
 
             StudentData.Rows[e.RowIndex].ReadOnly = true;
             int noOfRows = StudentData.RowCount;

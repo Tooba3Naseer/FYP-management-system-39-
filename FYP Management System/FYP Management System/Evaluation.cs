@@ -162,15 +162,62 @@ namespace FYP_Management_System
         // searching and filtering on the basis of name
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
+            if (!String.IsNullOrEmpty(textBoxSearch.Text))
+            {
+                EvaluationData.DataSource = null;
+                EvaluationData.Rows.Clear();
+                EvaluationData.Columns.Clear();
 
-            DataView dataView = new DataView(dataTable);
-            dataView.RowFilter = string.Format("Name LIKE '%{0}%'", textBoxSearch.Text);
-            EvaluationData.DataSource = dataView;
-         
+                dataTable = new DataTable();
+                SqlConnection conn = new SqlConnection(conURL);
+                conn.Open();
+                String str = "SELECT * FROM Evaluation where Name = @Name";
+                SqlCommand cmd = new SqlCommand(str, conn);
+                cmd.Parameters.Add(new SqlParameter("@Name", textBoxSearch.Text));
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                sda.Fill(dataTable);  // fill the data table with this data
+
+                EvaluationData.DataSource = dataTable; // assign to data grid
 
 
 
-        }
+
+                sda.Update(dataTable);
+                conn.Close();
+
+                //add button column
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                button.HeaderText = "Delete Data";
+                button.Name = "button";
+                button.Text = "DELETE";
+                button.UseColumnTextForButtonValue = true;
+                EvaluationData.Columns.Add(button);
+
+                //add button column
+                DataGridViewButtonColumn button1 = new DataGridViewButtonColumn();
+                button1.HeaderText = "Update Data";
+                button1.Name = "button1";
+                button1.Text = "UPDATE";
+                button1.UseColumnTextForButtonValue = true;
+                EvaluationData.Columns.Add(button1);
+
+
+                // adjust their widths when the data changes.
+                EvaluationData.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+
+            }
+            else
+            {
+                EvaluationData.DataSource = null;
+                EvaluationData.Rows.Clear();
+                EvaluationData.Columns.Clear();
+                update();
+
+            }
+
+            }
 
         private void textBoxSearch_Validated(object sender, EventArgs e)
         {

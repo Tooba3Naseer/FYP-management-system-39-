@@ -35,9 +35,13 @@
             this.Create = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.StudentGroupDatagrid = new System.Windows.Forms.DataGridView();
+            this.dataGridGroup = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGroupDatagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGroup)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,28 +85,30 @@
             this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search.Location = new System.Drawing.Point(12, 24);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(55, 18);
+            this.search.Size = new System.Drawing.Size(129, 18);
             this.search.TabIndex = 2;
-            this.search.Text = "Search";
+            this.search.Text = "Search by Reg No";
             // 
             // Create
             // 
             this.Create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Create.Location = new System.Drawing.Point(676, 23);
+            this.Create.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Create.Location = new System.Drawing.Point(628, 18);
             this.Create.Name = "Create";
-            this.Create.Size = new System.Drawing.Size(105, 23);
+            this.Create.Size = new System.Drawing.Size(144, 26);
             this.Create.TabIndex = 1;
-            this.Create.Text = "Create";
-            this.Create.UseVisualStyleBackColor = true;
+            this.Create.Text = "Create Group";
+            this.Create.UseVisualStyleBackColor = false;
             this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(87, 22);
+            this.textBoxSearch.Location = new System.Drawing.Point(147, 22);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(154, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(202, 20);
             this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // StudentGroupDatagrid
             // 
@@ -111,26 +117,60 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StudentGroupDatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.StudentGroupDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentGroupDatagrid.Location = new System.Drawing.Point(4, 163);
+            this.StudentGroupDatagrid.Location = new System.Drawing.Point(3, 136);
             this.StudentGroupDatagrid.Name = "StudentGroupDatagrid";
-            this.StudentGroupDatagrid.Size = new System.Drawing.Size(793, 275);
+            this.StudentGroupDatagrid.Size = new System.Drawing.Size(787, 127);
             this.StudentGroupDatagrid.TabIndex = 28;
+            this.StudentGroupDatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentGroupDatagrid_CellContentClick);
+            // 
+            // dataGridGroup
+            // 
+            this.dataGridGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridGroup.Location = new System.Drawing.Point(3, 3);
+            this.dataGridGroup.Name = "dataGridGroup";
+            this.dataGridGroup.Size = new System.Drawing.Size(787, 127);
+            this.dataGridGroup.TabIndex = 29;
+            this.dataGridGroup.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridGroup_CellContentClick);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.StudentGroupDatagrid, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridGroup, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 182);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(793, 266);
+            this.tableLayoutPanel1.TabIndex = 30;
             // 
             // StudentgroupManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.StudentGroupDatagrid);
+            this.ClientSize = new System.Drawing.Size(800, 470);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "StudentgroupManagment";
             this.Text = "StudentgroupManagment";
+            this.Load += new System.EventHandler(this.StudentgroupManagment_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGroupDatagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGroup)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -144,5 +184,7 @@
         private System.Windows.Forms.Button Create;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.DataGridView StudentGroupDatagrid;
+        private System.Windows.Forms.DataGridView dataGridGroup;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

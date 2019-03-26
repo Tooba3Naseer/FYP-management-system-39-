@@ -76,17 +76,59 @@ namespace FYP_Management_System
         // searching and filtering on the basis of FirstName
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            DataView dataView = new DataView(dataTable);
-            dataView.RowFilter = string.Format("FirstName LIKE '%{0}%'", textBoxSearch.Text);
-            AdvisorData.DataSource = dataView;
+            if(!String.IsNullOrEmpty(textBoxSearch.Text))
+            {
+                AdvisorData.DataSource = null;
+                AdvisorData.Rows.Clear();
+                AdvisorData.Columns.Clear();
+
+                dataTable = new DataTable();
+                SqlConnection conn = new SqlConnection(conURL);
+                conn.Open();
+                String str = "SELECT Person.Id, FirstName, LastName,Contact, Email,DateOfBirth,(SELECT Value FROM Lookup WHERE Category = 'GENDER' AND Id = Gender) AS 'Gender', (SELECT Value FROM Lookup WHERE Category = 'DESIGNATION' AND Id = Designation) AS 'Designation', Salary FROM Person Join Advisor ON Person.Id=Advisor.Id where FirstName = @FirstName";
+                SqlCommand cmd = new SqlCommand(str, conn);
+                cmd.Parameters.Add(new SqlParameter("@FirstName", textBoxSearch.Text));
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                sda.Fill(dataTable);  // fill the data table with this data
+
+                AdvisorData.DataSource = dataTable; // assign to data grid
+
+
+
+
+
+                conn.Close();
+
+                //add button column
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                button.HeaderText = "Delete Data";
+                button.Name = "button";
+                button.Text = "DELETE";
+                button.UseColumnTextForButtonValue = true;
+                AdvisorData.Columns.Add(button);
+
+                //add button column
+                DataGridViewButtonColumn button1 = new DataGridViewButtonColumn();
+                button1.HeaderText = "Update Data";
+                button1.Name = "button1";
+                button1.Text = "UPDATE";
+                button1.UseColumnTextForButtonValue = true;
+                AdvisorData.Columns.Add(button1);
+            }
+            else
+            {
+                AdvisorData.DataSource = null;
+                AdvisorData.Rows.Clear();
+                AdvisorData.Columns.Clear();
+                update();
+            }
+           
         }
 
         private void AdvisorData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            AdvisorData.DataSource = null;
-            AdvisorData.Rows.Clear();
-            AdvisorData.Columns.Clear();
-            update();
+            
             AdvisorData.Rows[e.RowIndex].ReadOnly = true;
 
 
