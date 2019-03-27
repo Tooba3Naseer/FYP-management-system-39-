@@ -54,5 +54,11 @@ namespace FYP_Management_System
             StudentgroupManagment sg = new StudentgroupManagment();
             sg.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProjectAdvisorManagement pa = new ProjectAdvisorManagement();
+            pa.ShowDialog();
+        }
     }
 }

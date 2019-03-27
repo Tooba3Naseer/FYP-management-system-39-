@@ -52,7 +52,7 @@
             this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Description.Location = new System.Drawing.Point(3, 47);
             this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(116, 58);
+            this.Description.Size = new System.Drawing.Size(115, 58);
             this.Description.TabIndex = 1;
             this.Description.Text = "Descrption";
             // 
@@ -65,7 +65,7 @@
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.Location = new System.Drawing.Point(3, 0);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(116, 47);
+            this.Title.Size = new System.Drawing.Size(115, 47);
             this.Title.TabIndex = 2;
             this.Title.Text = "Title";
             // 
@@ -74,7 +74,7 @@
             this.textBoxtitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxtitle.Location = new System.Drawing.Point(125, 3);
+            this.textBoxtitle.Location = new System.Drawing.Point(124, 3);
             this.textBoxtitle.Name = "textBoxtitle";
             this.textBoxtitle.Size = new System.Drawing.Size(355, 20);
             this.textBoxtitle.TabIndex = 5;
@@ -142,7 +142,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxtitle, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Title, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Description, 0, 1);
@@ -160,7 +160,7 @@
             this.textBoxdes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxdes.Location = new System.Drawing.Point(125, 50);
+            this.textBoxdes.Location = new System.Drawing.Point(124, 50);
             this.textBoxdes.Name = "textBoxdes";
             this.textBoxdes.Size = new System.Drawing.Size(355, 52);
             this.textBoxdes.TabIndex = 6;

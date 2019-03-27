@@ -65,7 +65,7 @@ namespace FYP_Management_System
                             string cmdText = "INSERT INTO Project (Description,Title) VALUES (@Description, @Title)";
 
                             SqlCommand c = new SqlCommand(cmdText, con);
-                            ;
+                            
                             c.Parameters.Add(new SqlParameter("@Description", textBoxdes.Text));
                             c.Parameters.Add(new SqlParameter("@Title", textBoxtitle.Text));
                             //execute it

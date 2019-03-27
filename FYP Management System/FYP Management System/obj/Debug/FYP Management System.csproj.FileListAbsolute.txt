@@ -18,3 +18,5 @@ F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\o
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.pdb
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AddStudent.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.StudentgroupManagment.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ProjectAdvisorManagement.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AssignAdvisor.resources
