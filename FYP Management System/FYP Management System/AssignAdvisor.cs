@@ -18,7 +18,7 @@ namespace FYP_Management_System
         {
             InitializeComponent();
         }
-
+        public static int buffer = -1;
         private void AssignAdvisor_Load(object sender, EventArgs e)
         {
 
@@ -59,6 +59,27 @@ namespace FYP_Management_System
 
             }
             reader2.Close();
+
+            buffer = ProjectAdvisorManagement.AdvisorID; // get id from advisor form for update.. if we dont make buffer then when we open simple create, it will show data
+            if (buffer > 0 && ProjectAdvisorManagement.projectID > 0)
+            {
+                String cmdText5 = "SELECT FirstName, LastName , (SELECT Value FROM [Lookup] where [Lookup].Id = AdvisorRole AND Category = 'ADVISOR_ROLE') AS 'AdvisorRole' FROM (ProjectAdvisor JOIN (Advisor JOIN Person ON Advisor.Id = Person.Id) ON ProjectAdvisor.AdvisorId = Advisor.Id) where AdvisorId = @AdvisorId AND ProjectId = @ProjectId";
+                SqlCommand c5 = new SqlCommand(cmdText5, con);
+                c5.Parameters.Add(new SqlParameter("@AdvisorId", buffer));
+                c5.Parameters.Add(new SqlParameter("@ProjectId", ProjectAdvisorManagement.projectID));
+                SqlDataReader reader5 = c5.ExecuteReader();
+
+                while (reader5.Read())
+                {
+                    comboBoxNames.Text = reader5["FirstName"].ToString();
+                    comboBoxLast.Text = reader5["LastName"].ToString();
+                    comboBoxAdvisor.Text = reader5["AdvisorRole"].ToString();
+
+                }
+                reader5.Close();
+
+                ProjectAdvisorManagement.AdvisorID = -1;
+            }
             con.Close();
         }
 
@@ -69,64 +90,108 @@ namespace FYP_Management_System
             // connection opens
             con.Open();
 
-            int ID = -99;
+            int ID = buffer;
 
             if (ID < 0)
             {
-              try
-              { 
-
-                // here check whether boxes are empty for not
-                if (String.IsNullOrEmpty(comboBoxNames.Text) || String.IsNullOrEmpty(comboBoxAdvisor.Text))
-                { MessageBox.Show("Fill all boxes must"); }
-                else
+                try
                 {
 
-                    // command store in string then execute it by passing into sqlcommand object
+                    // here check whether boxes are empty for not
+                    if (String.IsNullOrEmpty(comboBoxNames.Text) || String.IsNullOrEmpty(comboBoxAdvisor.Text))
+                    { MessageBox.Show("Fill first name and advisor role must"); }
+                    else
+                    {
 
-                    string cmdText = "INSERT INTO ProjectAdvisor (AdvisorId, ProjectId, AdvisorRole, AssignmentDate) VALUES ((SELECT Advisor.Id FROM (Person JOIN Advisor ON Advisor.Id = Person.Id) where FirstName=@FirstName AND LastName = @LastName), @ProjectId, (SELECT Id FROM [Lookup] where Category = 'ADVISOR_ROLE' AND Value = @Value), @AssignmentDate)";
+                        // command store in string then execute it by passing into sqlcommand object
 
-                    SqlCommand c = new SqlCommand(cmdText, con);
+                        string cmdText = "INSERT INTO ProjectAdvisor (AdvisorId, ProjectId, AdvisorRole, AssignmentDate) VALUES ((SELECT Advisor.Id FROM (Person JOIN Advisor ON Advisor.Id = Person.Id) where FirstName=@FirstName AND LastName = @LastName), @ProjectId, (SELECT Id FROM [Lookup] where Category = 'ADVISOR_ROLE' AND Value = @Value), @AssignmentDate)";
 
-                    c.Parameters.Add(new SqlParameter("@FirstName", comboBoxNames.Text));
-                    c.Parameters.Add(new SqlParameter("@LastName", comboBoxLast.Text));
-                    c.Parameters.Add(new SqlParameter("@ProjectId", ProjectAdvisorManagement.projectID));
-                    c.Parameters.Add(new SqlParameter("@Value", comboBoxAdvisor.Text));
-                    c.Parameters.Add(new SqlParameter("@AssignmentDate", DateTime.Now));
-                    //execute it
-                    int result = c.ExecuteNonQuery();
-                    if (result < 0)
-                        MessageBox.Show("Error");
+                        SqlCommand c = new SqlCommand(cmdText, con);
 
-
-                    // show dialog box if added in table of database
-                    MessageBox.Show("Successfully Added");
-                    con.Close();
-                    this.Hide();
-                    ProjectAdvisorManagement datap = new ProjectAdvisorManagement();
-                    datap.ShowDialog();
-                    this.Close(); // close the form
+                        c.Parameters.Add(new SqlParameter("@FirstName", comboBoxNames.Text));
+                        c.Parameters.Add(new SqlParameter("@LastName", comboBoxLast.Text));
+                        c.Parameters.Add(new SqlParameter("@ProjectId", ProjectAdvisorManagement.projectID));
+                        c.Parameters.Add(new SqlParameter("@Value", comboBoxAdvisor.Text));
+                        c.Parameters.Add(new SqlParameter("@AssignmentDate", DateTime.Now));
+                        //execute it
+                        int result = c.ExecuteNonQuery();
+                        if (result < 0)
+                            MessageBox.Show("Error");
 
 
+                        // show dialog box if added in table of database
+                        MessageBox.Show("Successfully Added");
+                        con.Close();
+                        this.Hide();
+                        ProjectAdvisorManagement datap = new ProjectAdvisorManagement();
+                        datap.ShowDialog();
+                        this.Close(); // close the form
 
 
+
+
+                    }
                 }
-            }
-                
+
                 catch (Exception)
                 {
                     MessageBox.Show("Enter name and role in correct Format!!");
                 }
 
             }
-        }
 
-        private void Cancel_Click(object sender, EventArgs e)
+            else
+            {
+                try
+                {
+
+                    if (!String.IsNullOrEmpty(comboBoxNames.Text) && !String.IsNullOrEmpty(comboBoxAdvisor.Text))
+                    {
+                        string cmdText2 = "Update ProjectAdvisor SET AdvisorId = (SELECT Advisor.Id FROM Person JOIN Advisor ON Advisor.Id = Person.Id where FirstName = @FirstName AND LastName = @LastName), AdvisorRole= (SELECT Id FROM [Lookup] where Category = 'ADVISOR_ROLE' AND Value = @Value) WHERE ProjectId = @ProjectId AND AdvisorId = @AdvisorId";
+                        SqlCommand c2 = new SqlCommand(cmdText2, con);
+                        c2.Parameters.Add(new SqlParameter("@ProjectId", ProjectAdvisorManagement.projectID));
+                        c2.Parameters.Add(new SqlParameter("@AdvisorId", ID));
+                        c2.Parameters.Add(new SqlParameter("@FirstName", comboBoxNames.Text));
+                        c2.Parameters.Add(new SqlParameter("@LastName", comboBoxLast.Text));
+                        c2.Parameters.Add(new SqlParameter("@Value", comboBoxAdvisor.Text));
+                       
+
+
+
+                        c2.ExecuteNonQuery();
+                        MessageBox.Show("Successfully Updated");
+                        con.Close();
+                        this.Hide();
+                        ProjectAdvisorManagement datap = new ProjectAdvisorManagement();
+                        datap.ShowDialog();
+                        this.Close(); // close the form
+
+                    }
+                    else
+                    {
+                        throw new ArgumentNullException();
+                    }
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Enter name and role in correct Format!!");
+                }
+            }
+            }
+
+            private void Cancel_Click(object sender, EventArgs e)
         {
             this.Hide();
             ProjectAdvisorManagement datap = new ProjectAdvisorManagement();
             datap.ShowDialog();
             this.Close();// close the form
+        }
+
+        private void comboBoxLast_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

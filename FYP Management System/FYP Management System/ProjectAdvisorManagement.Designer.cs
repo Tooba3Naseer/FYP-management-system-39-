@@ -93,6 +93,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(202, 20);
             this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -122,6 +123,7 @@
             this.ProjectAdvisorDatagrid.Name = "ProjectAdvisorDatagrid";
             this.ProjectAdvisorDatagrid.Size = new System.Drawing.Size(794, 134);
             this.ProjectAdvisorDatagrid.TabIndex = 28;
+            this.ProjectAdvisorDatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProjectAdvisorDatagrid_CellContentClick);
             // 
             // dataGridproject
             // 

@@ -32,14 +32,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxNames = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.comboBoxAdvisor = new System.Windows.Forms.ComboBox();
+            this.comboBoxLast = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
-            this.comboBoxNames = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxLast = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 246F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxNames, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
@@ -99,9 +99,21 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 65);
+            this.label2.Size = new System.Drawing.Size(106, 65);
             this.label2.TabIndex = 3;
             this.label2.Text = "First Name";
+            // 
+            // comboBoxNames
+            // 
+            this.comboBoxNames.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNames.FormattingEnabled = true;
+            this.comboBoxNames.Location = new System.Drawing.Point(115, 3);
+            this.comboBoxNames.Name = "comboBoxNames";
+            this.comboBoxNames.Size = new System.Drawing.Size(328, 24);
+            this.comboBoxNames.TabIndex = 21;
             // 
             // label3
             // 
@@ -112,20 +124,47 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 62);
+            this.label3.Size = new System.Drawing.Size(106, 62);
             this.label3.TabIndex = 4;
             this.label3.Text = "Advisor Role";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 67);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Last Name";
             // 
             // comboBoxAdvisor
             // 
             this.comboBoxAdvisor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxAdvisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxAdvisor.FormattingEnabled = true;
-            this.comboBoxAdvisor.Location = new System.Drawing.Point(116, 135);
+            this.comboBoxAdvisor.Location = new System.Drawing.Point(115, 135);
             this.comboBoxAdvisor.Name = "comboBoxAdvisor";
-            this.comboBoxAdvisor.Size = new System.Drawing.Size(328, 21);
+            this.comboBoxAdvisor.Size = new System.Drawing.Size(328, 24);
             this.comboBoxAdvisor.TabIndex = 20;
+            // 
+            // comboBoxLast
+            // 
+            this.comboBoxLast.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLast.FormattingEnabled = true;
+            this.comboBoxLast.Location = new System.Drawing.Point(115, 68);
+            this.comboBoxLast.Name = "comboBoxLast";
+            this.comboBoxLast.Size = new System.Drawing.Size(328, 24);
+            this.comboBoxLast.TabIndex = 23;
+            this.comboBoxLast.SelectedIndexChanged += new System.EventHandler(this.comboBoxLast_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -160,41 +199,6 @@
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
-            // comboBoxNames
-            // 
-            this.comboBoxNames.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxNames.FormattingEnabled = true;
-            this.comboBoxNames.Location = new System.Drawing.Point(116, 3);
-            this.comboBoxNames.Name = "comboBoxNames";
-            this.comboBoxNames.Size = new System.Drawing.Size(328, 21);
-            this.comboBoxNames.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 67);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Last Name";
-            // 
-            // comboBoxLast
-            // 
-            this.comboBoxLast.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxLast.FormattingEnabled = true;
-            this.comboBoxLast.Location = new System.Drawing.Point(116, 68);
-            this.comboBoxLast.Name = "comboBoxLast";
-            this.comboBoxLast.Size = new System.Drawing.Size(328, 21);
-            this.comboBoxLast.TabIndex = 23;
             // 
             // AssignAdvisor
             // 
