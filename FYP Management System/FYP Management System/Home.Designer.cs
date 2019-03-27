@@ -31,12 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonSg = new System.Windows.Forms.Button();
-            this.MevalButton = new System.Windows.Forms.Button();
             this.Mprojects = new System.Windows.Forms.Button();
             this.Madvisors = new System.Windows.Forms.Button();
             this.Mstudents = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.MevalButton = new System.Windows.Forms.Button();
+            this.buttonSg = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.Mprojects, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.Madvisors, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Mstudents, 0, 0);
@@ -79,47 +81,22 @@
             this.tableLayoutPanel1.Controls.Add(this.buttonSg, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 94);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(766, 316);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(766, 248);
             this.tableLayoutPanel1.TabIndex = 23;
-            // 
-            // buttonSg
-            // 
-            this.buttonSg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSg.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonSg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSg.Location = new System.Drawing.Point(85, 231);
-            this.buttonSg.Name = "buttonSg";
-            this.buttonSg.Size = new System.Drawing.Size(213, 69);
-            this.buttonSg.TabIndex = 4;
-            this.buttonSg.Text = "Formation of Student Group and its management";
-            this.buttonSg.UseVisualStyleBackColor = false;
-            this.buttonSg.Click += new System.EventHandler(this.buttonSg_Click);
-            // 
-            // MevalButton
-            // 
-            this.MevalButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MevalButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.MevalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MevalButton.Location = new System.Drawing.Point(468, 130);
-            this.MevalButton.Name = "MevalButton";
-            this.MevalButton.Size = new System.Drawing.Size(213, 64);
-            this.MevalButton.TabIndex = 3;
-            this.MevalButton.Text = "Manage Evaluations";
-            this.MevalButton.UseVisualStyleBackColor = false;
-            this.MevalButton.Click += new System.EventHandler(this.MevalButton_Click);
             // 
             // Mprojects
             // 
             this.Mprojects.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Mprojects.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Mprojects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mprojects.Location = new System.Drawing.Point(85, 130);
+            this.Mprojects.Location = new System.Drawing.Point(85, 65);
             this.Mprojects.Name = "Mprojects";
-            this.Mprojects.Size = new System.Drawing.Size(213, 64);
+            this.Mprojects.Size = new System.Drawing.Size(213, 56);
             this.Mprojects.TabIndex = 2;
             this.Mprojects.Text = "Manage Projects";
             this.Mprojects.UseVisualStyleBackColor = false;
@@ -130,9 +107,9 @@
             this.Madvisors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Madvisors.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Madvisors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Madvisors.Location = new System.Drawing.Point(468, 22);
+            this.Madvisors.Location = new System.Drawing.Point(468, 3);
             this.Madvisors.Name = "Madvisors";
-            this.Madvisors.Size = new System.Drawing.Size(213, 64);
+            this.Madvisors.Size = new System.Drawing.Size(213, 56);
             this.Madvisors.TabIndex = 1;
             this.Madvisors.Text = "Manage Advisors";
             this.Madvisors.UseVisualStyleBackColor = false;
@@ -143,9 +120,9 @@
             this.Mstudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Mstudents.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Mstudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mstudents.Location = new System.Drawing.Point(85, 22);
+            this.Mstudents.Location = new System.Drawing.Point(85, 3);
             this.Mstudents.Name = "Mstudents";
-            this.Mstudents.Size = new System.Drawing.Size(213, 64);
+            this.Mstudents.Size = new System.Drawing.Size(213, 56);
             this.Mstudents.TabIndex = 0;
             this.Mstudents.Text = "Manage Students";
             this.Mstudents.UseVisualStyleBackColor = false;
@@ -156,13 +133,52 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(468, 234);
+            this.button1.Location = new System.Drawing.Point(468, 127);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 64);
+            this.button1.Size = new System.Drawing.Size(213, 55);
             this.button1.TabIndex = 5;
             this.button1.Text = "Assignment of multiple advisors to the project \r\n";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // MevalButton
+            // 
+            this.MevalButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MevalButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.MevalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MevalButton.Location = new System.Drawing.Point(468, 65);
+            this.MevalButton.Name = "MevalButton";
+            this.MevalButton.Size = new System.Drawing.Size(213, 56);
+            this.MevalButton.TabIndex = 3;
+            this.MevalButton.Text = "Manage Evaluations";
+            this.MevalButton.UseVisualStyleBackColor = false;
+            this.MevalButton.Click += new System.EventHandler(this.MevalButton_Click);
+            // 
+            // buttonSg
+            // 
+            this.buttonSg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSg.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonSg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSg.Location = new System.Drawing.Point(85, 127);
+            this.buttonSg.Name = "buttonSg";
+            this.buttonSg.Size = new System.Drawing.Size(213, 55);
+            this.buttonSg.TabIndex = 4;
+            this.buttonSg.Text = "Formation of Student Group and its management";
+            this.buttonSg.UseVisualStyleBackColor = false;
+            this.buttonSg.Click += new System.EventHandler(this.buttonSg_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(85, 189);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(213, 55);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Assignment of project to a group of students \r\n";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Home
             // 
@@ -192,5 +208,6 @@
         private System.Windows.Forms.Button Madvisors;
         private System.Windows.Forms.Button buttonSg;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

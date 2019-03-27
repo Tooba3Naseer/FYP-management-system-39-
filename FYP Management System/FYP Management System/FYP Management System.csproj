@@ -64,6 +64,12 @@
     <Compile Include="AssignAdvisor.Designer.cs">
       <DependentUpon>AssignAdvisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssignProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignProject.Designer.cs">
+      <DependentUpon>AssignProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create Evaluation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="Evaluation.Designer.cs">
       <DependentUpon>Evaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupProject.Designer.cs">
+      <DependentUpon>GroupProject.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -120,6 +132,12 @@
       <DependentUpon>ProjectAdvisorManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMembers.Designer.cs">
+      <DependentUpon>ShowMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentgroupManagment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +153,9 @@
     <EmbeddedResource Include="AssignAdvisor.resx">
       <DependentUpon>AssignAdvisor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AssignProject.resx">
+      <DependentUpon>AssignProject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create Evaluation.resx">
       <DependentUpon>Create Evaluation.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Evaluation.resx">
       <DependentUpon>Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupProject.resx">
+      <DependentUpon>GroupProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -171,6 +195,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShowMembers.resx">
+      <DependentUpon>ShowMembers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentgroupManagment.resx">
       <DependentUpon>StudentgroupManagment.cs</DependentUpon>
     </EmbeddedResource>

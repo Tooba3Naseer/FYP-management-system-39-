@@ -60,5 +60,11 @@ namespace FYP_Management_System
             ProjectAdvisorManagement pa = new ProjectAdvisorManagement();
             pa.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GroupProject gp = new GroupProject();
+            gp.ShowDialog();
+        }
     }
 }
