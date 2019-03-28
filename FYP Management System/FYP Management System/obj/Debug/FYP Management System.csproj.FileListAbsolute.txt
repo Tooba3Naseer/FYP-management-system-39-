@@ -23,3 +23,5 @@ F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\o
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.GroupProject.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AssignProject.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ShowMembers.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.EvaluationGroup.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.MarkEvaluationGroup.resources

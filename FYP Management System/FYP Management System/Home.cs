@@ -66,5 +66,11 @@ namespace FYP_Management_System
             GroupProject gp = new GroupProject();
             gp.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MarkEvaluationGroup eg = new MarkEvaluationGroup();
+            eg.ShowDialog();
+        }
     }
 }

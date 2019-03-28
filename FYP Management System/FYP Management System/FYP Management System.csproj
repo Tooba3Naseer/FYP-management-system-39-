@@ -94,6 +94,12 @@
     <Compile Include="Evaluation.Designer.cs">
       <DependentUpon>Evaluation.cs</DependentUpon>
     </Compile>
+    <Compile Include="EvaluationGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluationGroup.Designer.cs">
+      <DependentUpon>EvaluationGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="InsertProject.Designer.cs">
       <DependentUpon>InsertProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkEvaluationGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkEvaluationGroup.Designer.cs">
+      <DependentUpon>MarkEvaluationGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonStudent.cs">
       <SubType>Form</SubType>
@@ -168,6 +180,9 @@
     <EmbeddedResource Include="Evaluation.resx">
       <DependentUpon>Evaluation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EvaluationGroup.resx">
+      <DependentUpon>EvaluationGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupProject.resx">
       <DependentUpon>GroupProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InsertProject.resx">
       <DependentUpon>InsertProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkEvaluationGroup.resx">
+      <DependentUpon>MarkEvaluationGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonStudent.resx">
       <DependentUpon>PersonStudent.cs</DependentUpon>

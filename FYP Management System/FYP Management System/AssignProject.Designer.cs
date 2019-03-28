@@ -70,7 +70,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.74157F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.25843F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxtitle, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 105);
@@ -102,7 +102,7 @@
             this.comboBoxtitle.FormattingEnabled = true;
             this.comboBoxtitle.Location = new System.Drawing.Point(128, 3);
             this.comboBoxtitle.Name = "comboBoxtitle";
-            this.comboBoxtitle.Size = new System.Drawing.Size(338, 24);
+            this.comboBoxtitle.Size = new System.Drawing.Size(336, 24);
             this.comboBoxtitle.TabIndex = 21;
             // 
             // panel2

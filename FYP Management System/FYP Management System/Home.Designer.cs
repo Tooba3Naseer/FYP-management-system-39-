@@ -31,13 +31,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.Mprojects = new System.Windows.Forms.Button();
             this.Madvisors = new System.Windows.Forms.Button();
             this.Mstudents = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.MevalButton = new System.Windows.Forms.Button();
             this.buttonSg = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +73,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.button2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.Mprojects, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.Madvisors, 1, 0);
@@ -88,6 +90,19 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(766, 248);
             this.tableLayoutPanel1.TabIndex = 23;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(468, 189);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(213, 55);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Assignment of project to a group of students \r\n";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Mprojects
             // 
@@ -167,18 +182,18 @@
             this.buttonSg.UseVisualStyleBackColor = false;
             this.buttonSg.Click += new System.EventHandler(this.buttonSg_Click);
             // 
-            // button2
+            // button3
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(85, 189);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(213, 55);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Assignment of project to a group of students \r\n";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(85, 189);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(213, 55);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Mark the evaluations against a group \r\n\r\n";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Home
             // 
@@ -209,5 +224,6 @@
         private System.Windows.Forms.Button buttonSg;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
