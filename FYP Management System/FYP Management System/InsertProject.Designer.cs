@@ -76,7 +76,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxtitle.Location = new System.Drawing.Point(124, 3);
             this.textBoxtitle.Name = "textBoxtitle";
-            this.textBoxtitle.Size = new System.Drawing.Size(354, 20);
+            this.textBoxtitle.Size = new System.Drawing.Size(353, 20);
             this.textBoxtitle.TabIndex = 5;
             // 
             // Save
@@ -142,7 +142,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxtitle, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Title, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Description, 0, 1);
@@ -162,7 +162,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxdes.Location = new System.Drawing.Point(124, 50);
             this.textBoxdes.Name = "textBoxdes";
-            this.textBoxdes.Size = new System.Drawing.Size(354, 52);
+            this.textBoxdes.Size = new System.Drawing.Size(353, 52);
             this.textBoxdes.TabIndex = 6;
             this.textBoxdes.Text = "";
             // 

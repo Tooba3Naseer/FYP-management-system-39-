@@ -153,7 +153,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRegNo.Location = new System.Drawing.Point(135, 238);
             this.textBoxRegNo.Name = "textBoxRegNo";
-            this.textBoxRegNo.Size = new System.Drawing.Size(385, 20);
+            this.textBoxRegNo.Size = new System.Drawing.Size(384, 20);
             this.textBoxRegNo.TabIndex = 7;
             // 
             // textBoxEmail
@@ -163,7 +163,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxEmail.Location = new System.Drawing.Point(135, 99);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(385, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(384, 20);
             this.textBoxEmail.TabIndex = 10;
             // 
             // textBoxContact
@@ -173,7 +173,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxContact.Location = new System.Drawing.Point(135, 61);
             this.textBoxContact.Name = "textBoxContact";
-            this.textBoxContact.Size = new System.Drawing.Size(385, 20);
+            this.textBoxContact.Size = new System.Drawing.Size(384, 20);
             this.textBoxContact.TabIndex = 11;
             // 
             // textBoxLast
@@ -183,7 +183,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLast.Location = new System.Drawing.Point(135, 29);
             this.textBoxLast.Name = "textBoxLast";
-            this.textBoxLast.Size = new System.Drawing.Size(385, 20);
+            this.textBoxLast.Size = new System.Drawing.Size(384, 20);
             this.textBoxLast.TabIndex = 12;
             // 
             // textBoxName
@@ -193,7 +193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxName.Location = new System.Drawing.Point(135, 3);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(385, 20);
+            this.textBoxName.Size = new System.Drawing.Size(384, 20);
             this.textBoxName.TabIndex = 13;
             // 
             // button1
@@ -229,7 +229,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(135, 138);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(385, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(384, 20);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // male
@@ -263,7 +263,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LastName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 4);

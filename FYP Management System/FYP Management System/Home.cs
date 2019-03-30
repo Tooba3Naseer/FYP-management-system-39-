@@ -72,5 +72,11 @@ namespace FYP_Management_System
             MarkEvaluationGroup eg = new MarkEvaluationGroup();
             eg.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Report1 eg = new Report1();
+            eg.ShowDialog();
+        }
     }
 }

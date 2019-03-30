@@ -25,3 +25,7 @@ F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\o
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ShowMembers.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.EvaluationGroup.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.MarkEvaluationGroup.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Report1.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\itextsharp.dll
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\itextsharp.xml
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.CopyComplete

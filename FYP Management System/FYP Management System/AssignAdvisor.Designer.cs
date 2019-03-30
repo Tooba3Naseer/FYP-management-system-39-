@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 249F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxNames, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
@@ -112,7 +112,7 @@
             this.comboBoxNames.FormattingEnabled = true;
             this.comboBoxNames.Location = new System.Drawing.Point(115, 3);
             this.comboBoxNames.Name = "comboBoxNames";
-            this.comboBoxNames.Size = new System.Drawing.Size(326, 24);
+            this.comboBoxNames.Size = new System.Drawing.Size(325, 24);
             this.comboBoxNames.TabIndex = 21;
             // 
             // label3
@@ -150,7 +150,7 @@
             this.comboBoxAdvisor.FormattingEnabled = true;
             this.comboBoxAdvisor.Location = new System.Drawing.Point(115, 135);
             this.comboBoxAdvisor.Name = "comboBoxAdvisor";
-            this.comboBoxAdvisor.Size = new System.Drawing.Size(326, 24);
+            this.comboBoxAdvisor.Size = new System.Drawing.Size(325, 24);
             this.comboBoxAdvisor.TabIndex = 20;
             // 
             // comboBoxLast
@@ -162,7 +162,7 @@
             this.comboBoxLast.FormattingEnabled = true;
             this.comboBoxLast.Location = new System.Drawing.Point(115, 68);
             this.comboBoxLast.Name = "comboBoxLast";
-            this.comboBoxLast.Size = new System.Drawing.Size(326, 24);
+            this.comboBoxLast.Size = new System.Drawing.Size(325, 24);
             this.comboBoxLast.TabIndex = 23;
             this.comboBoxLast.SelectedIndexChanged += new System.EventHandler(this.comboBoxLast_SelectedIndexChanged);
             // 

@@ -108,7 +108,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LastName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxMarks, 1, 1);
@@ -129,7 +129,7 @@
             this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxName.Location = new System.Drawing.Point(109, 3);
+            this.textBoxName.Location = new System.Drawing.Point(108, 3);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(307, 20);
             this.textBoxName.TabIndex = 13;
@@ -144,7 +144,7 @@
             this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastName.Location = new System.Drawing.Point(3, 58);
             this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(100, 52);
+            this.LastName.Size = new System.Drawing.Size(99, 52);
             this.LastName.TabIndex = 1;
             this.LastName.Text = "Total Marks";
             // 
@@ -153,7 +153,7 @@
             this.textBoxMarks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxMarks.Location = new System.Drawing.Point(109, 61);
+            this.textBoxMarks.Location = new System.Drawing.Point(108, 61);
             this.textBoxMarks.Name = "textBoxMarks";
             this.textBoxMarks.Size = new System.Drawing.Size(307, 20);
             this.textBoxMarks.TabIndex = 12;
@@ -163,7 +163,7 @@
             this.textBoxWeghtage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxWeghtage.Location = new System.Drawing.Point(109, 113);
+            this.textBoxWeghtage.Location = new System.Drawing.Point(108, 113);
             this.textBoxWeghtage.Name = "textBoxWeghtage";
             this.textBoxWeghtage.Size = new System.Drawing.Size(307, 20);
             this.textBoxWeghtage.TabIndex = 11;
@@ -177,7 +177,7 @@
             this.Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contact.Location = new System.Drawing.Point(3, 110);
             this.Contact.Name = "Contact";
-            this.Contact.Size = new System.Drawing.Size(100, 115);
+            this.Contact.Size = new System.Drawing.Size(99, 115);
             this.Contact.TabIndex = 2;
             this.Contact.Text = "Total Weightage";
             // 
@@ -190,7 +190,7 @@
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstName.Location = new System.Drawing.Point(3, 0);
             this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(100, 58);
+            this.FirstName.Size = new System.Drawing.Size(99, 58);
             this.FirstName.TabIndex = 0;
             this.FirstName.Text = "Name";
             // 
