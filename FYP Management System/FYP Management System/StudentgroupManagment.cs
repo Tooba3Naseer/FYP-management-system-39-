@@ -60,6 +60,64 @@ namespace FYP_Management_System
                 st.ShowDialog();
                 this.Close();
             }
+
+            if (e.ColumnIndex == 6 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1)) // when click on del button
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure that you want to delete it?", "Confirmation", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    SqlConnection con = new SqlConnection(conURL);
+
+                    // connection opens
+                    con.Open();
+
+
+                    try
+                    {
+
+                        string cmdText = "DELETE FROM GroupStudent WHERE GroupId = @GroupId AND StudentId = @StudentId";
+
+                        SqlCommand c = new SqlCommand(cmdText, con);
+
+
+                        int Idy = Convert.ToInt32(StudentGroupDatagrid.Rows[e.RowIndex].Cells[0].Value);
+                        int stid = Convert.ToInt32(StudentGroupDatagrid.Rows[e.RowIndex].Cells[1].Value);
+                        c.Parameters.Add(new SqlParameter("@GroupId", Idy));
+                        c.Parameters.Add(new SqlParameter("@StudentId", stid));
+                        // execute it
+
+                        c.ExecuteNonQuery();
+
+                        
+                        // connection closed
+
+                        con.Close();
+
+                        dataGridGroup.DataSource = null;
+                        dataGridGroup.Rows.Clear();
+                        dataGridGroup.Columns.Clear();
+                        StudentGroupDatagrid.DataSource = null;
+                        StudentGroupDatagrid.Rows.Clear();
+                        StudentGroupDatagrid.Columns.Clear();
+                        update();
+
+                        MessageBox.Show("Successfully Deleted");
+                    }
+                    catch (Exception)
+
+                    {
+
+                        MessageBox.Show("Error");
+                    }
+
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
+            }
+
+
         }
 
         public void update()
@@ -112,6 +170,13 @@ namespace FYP_Management_System
             button1.Text = "UPDATE";
             button1.UseColumnTextForButtonValue = true;
             StudentGroupDatagrid.Columns.Add(button1);
+
+            DataGridViewButtonColumn buttont = new DataGridViewButtonColumn();
+            buttont.HeaderText = "Delete Data";
+            buttont.Name = "buttont";
+            buttont.Text = "DELETE";
+            buttont.UseColumnTextForButtonValue = true;
+            StudentGroupDatagrid.Columns.Add(buttont);
 
 
             // adjust their widths when the data changes.
@@ -198,7 +263,8 @@ namespace FYP_Management_System
             else { }
         
     }
-
+        // this is for searching purpose, searching based on regNo, when user enter complete regNo, then user able 
+        // to see filtered rows
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             if(!String.IsNullOrEmpty(textBoxSearch.Text))
@@ -262,6 +328,13 @@ namespace FYP_Management_System
                 button1.Text = "UPDATE";
                 button1.UseColumnTextForButtonValue = true;
                 StudentGroupDatagrid.Columns.Add(button1);
+
+                DataGridViewButtonColumn buttont = new DataGridViewButtonColumn();
+                buttont.HeaderText = "Delete Data";
+                buttont.Name = "buttont";
+                buttont.Text = "DELETE";
+                buttont.UseColumnTextForButtonValue = true;
+                StudentGroupDatagrid.Columns.Add(buttont);
 
 
                 // adjust their widths when the data changes.

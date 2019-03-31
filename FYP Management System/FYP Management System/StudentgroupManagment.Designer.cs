@@ -50,9 +50,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(4, 12);
+            this.panel1.Location = new System.Drawing.Point(4, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(793, 57);
+            this.panel1.Size = new System.Drawing.Size(793, 62);
             this.panel1.TabIndex = 26;
             // 
             // label1
@@ -60,7 +60,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(109, 14);
+            this.label1.Location = new System.Drawing.Point(109, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(576, 29);
             this.label1.TabIndex = 5;
@@ -74,7 +74,7 @@
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.Create);
             this.panel2.Controls.Add(this.textBoxSearch);
-            this.panel2.Location = new System.Drawing.Point(4, 89);
+            this.panel2.Location = new System.Drawing.Point(4, 81);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(793, 62);
             this.panel2.TabIndex = 27;

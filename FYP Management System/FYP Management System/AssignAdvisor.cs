@@ -26,7 +26,7 @@ namespace FYP_Management_System
             con.Open();
             string cmdText1 = "SELECT FirstName FROM Advisor JOIN Person ON Advisor.Id = Person.Id";
             SqlCommand c1 = new SqlCommand(cmdText1, con);
-            
+            // load all firstname of advisors in combo box
             SqlDataReader reader1 = c1.ExecuteReader();
 
             while (reader1.Read())
@@ -38,7 +38,7 @@ namespace FYP_Management_System
 
             string cmdText3 = "SELECT LastName FROM Advisor JOIN Person ON Advisor.Id = Person.Id";
             SqlCommand c3 = new SqlCommand(cmdText3, con);
-
+            // load all lastname of advisors in combo box
             SqlDataReader reader3 = c3.ExecuteReader();
 
             while (reader3.Read())
@@ -47,7 +47,7 @@ namespace FYP_Management_System
 
             }
             reader3.Close();
-
+            // load values of advisor roles in combo box
             string cmdText2 = "SELECT Value FROM [Lookup] where Category = 'ADVISOR_ROLE'";
             SqlCommand c2 = new SqlCommand(cmdText2, con);
 
@@ -60,7 +60,7 @@ namespace FYP_Management_System
             }
             reader2.Close();
 
-            buffer = ProjectAdvisorManagement.AdvisorID; // get id from advisor form for update.. if we dont make buffer then when we open simple create, it will show data
+            buffer = ProjectAdvisorManagement.AdvisorID; // get id from advisor form for showing all previous data, and so we can update it.. 
             if (buffer > 0 && ProjectAdvisorManagement.projectID > 0)
             {
                 String cmdText5 = "SELECT FirstName, LastName , (SELECT Value FROM [Lookup] where [Lookup].Id = AdvisorRole AND Category = 'ADVISOR_ROLE') AS 'AdvisorRole' FROM (ProjectAdvisor JOIN (Advisor JOIN Person ON Advisor.Id = Person.Id) ON ProjectAdvisor.AdvisorId = Advisor.Id) where AdvisorId = @AdvisorId AND ProjectId = @ProjectId";
@@ -70,7 +70,7 @@ namespace FYP_Management_System
                 SqlDataReader reader5 = c5.ExecuteReader();
 
                 while (reader5.Read())
-                {
+                {    // previous data shows in boxes
                     comboBoxNames.Text = reader5["FirstName"].ToString();
                     comboBoxLast.Text = reader5["LastName"].ToString();
                     comboBoxAdvisor.Text = reader5["AdvisorRole"].ToString();
@@ -103,10 +103,10 @@ namespace FYP_Management_System
                     else
                     {
 
-                        // command store in string then execute it by passing into sqlcommand object
+                        
 
                         string cmdText = "INSERT INTO ProjectAdvisor (AdvisorId, ProjectId, AdvisorRole, AssignmentDate) VALUES ((SELECT Advisor.Id FROM (Person JOIN Advisor ON Advisor.Id = Person.Id) where FirstName=@FirstName AND LastName = @LastName), @ProjectId, (SELECT Id FROM [Lookup] where Category = 'ADVISOR_ROLE' AND Value = @Value), @AssignmentDate)";
-
+                        // command store in string then execute it by passing into sqlcommand object
                         SqlCommand c = new SqlCommand(cmdText, con);
 
                         c.Parameters.Add(new SqlParameter("@FirstName", comboBoxNames.Text));
@@ -144,7 +144,8 @@ namespace FYP_Management_System
             else
             {
                 try
-                {
+                {      // trycatch handles exceptions
+                      // update data
 
                     if (!String.IsNullOrEmpty(comboBoxNames.Text) && !String.IsNullOrEmpty(comboBoxAdvisor.Text))
                     {
@@ -180,7 +181,7 @@ namespace FYP_Management_System
                 }
             }
             }
-
+        
             private void Cancel_Click(object sender, EventArgs e)
         {
             this.Hide();

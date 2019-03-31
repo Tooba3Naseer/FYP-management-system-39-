@@ -47,9 +47,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 60);
+            this.panel1.Size = new System.Drawing.Size(799, 62);
             this.panel1.TabIndex = 26;
             // 
             // label1
@@ -57,7 +57,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(228, 17);
+            this.label1.Location = new System.Drawing.Point(228, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(310, 29);
             this.label1.TabIndex = 5;
@@ -70,7 +70,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.74157F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.25843F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxtitle, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 105);
@@ -89,7 +89,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 133);
+            this.label2.Size = new System.Drawing.Size(118, 133);
             this.label2.TabIndex = 3;
             this.label2.Text = "Project Title";
             // 
@@ -100,7 +100,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxtitle.FormattingEnabled = true;
-            this.comboBoxtitle.Location = new System.Drawing.Point(128, 3);
+            this.comboBoxtitle.Location = new System.Drawing.Point(127, 3);
             this.comboBoxtitle.Name = "comboBoxtitle";
             this.comboBoxtitle.Size = new System.Drawing.Size(336, 24);
             this.comboBoxtitle.TabIndex = 21;

@@ -61,7 +61,7 @@ namespace FYP_Management_System
                     else
                     {
 
-
+                        // if all validation are true then insert data
                         if (isalphaTest(textBoxName.Text) && Convert.ToInt32(textBoxWeghtage.Text) >= 0 && Convert.ToInt32(textBoxMarks.Text) >= 0)
                         {
 

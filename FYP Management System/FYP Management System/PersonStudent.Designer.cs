@@ -35,9 +35,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.StudentData)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StudentData
@@ -47,9 +49,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StudentData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.StudentData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentData.Location = new System.Drawing.Point(12, 163);
+            this.StudentData.Location = new System.Drawing.Point(3, 3);
             this.StudentData.Name = "StudentData";
-            this.StudentData.Size = new System.Drawing.Size(776, 275);
+            this.StudentData.Size = new System.Drawing.Size(791, 268);
             this.StudentData.TabIndex = 0;
             this.StudentData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentData_CellContentClick);
             // 
@@ -57,7 +59,7 @@
             // 
             this.Create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Create.Location = new System.Drawing.Point(659, 23);
+            this.Create.Location = new System.Drawing.Point(680, 23);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(105, 23);
             this.Create.TabIndex = 1;
@@ -88,7 +90,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(256, 12);
+            this.label1.Location = new System.Drawing.Point(266, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 29);
             this.label1.TabIndex = 4;
@@ -103,9 +105,9 @@
             this.panel1.Controls.Add(this.search);
             this.panel1.Controls.Add(this.Create);
             this.panel1.Controls.Add(this.textBoxSearch);
-            this.panel1.Location = new System.Drawing.Point(12, 69);
+            this.panel1.Location = new System.Drawing.Point(2, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 62);
+            this.panel1.Size = new System.Drawing.Size(797, 62);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -114,18 +116,33 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(2, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 51);
+            this.panel2.Size = new System.Drawing.Size(797, 53);
             this.panel2.TabIndex = 6;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.StudentData, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 147);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(797, 274);
+            this.tableLayoutPanel1.TabIndex = 7;
             // 
             // PersonStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.StudentData);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PersonStudent";
@@ -136,6 +153,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -149,5 +167,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

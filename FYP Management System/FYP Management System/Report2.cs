@@ -35,10 +35,12 @@ namespace FYP_Management_System
             dataGridreport.DataSource = dataTable2;
         }
 
+        // this function will convert grid to pdf file, plus add title in it.
         public void gridTOpdf(DataGridView dataGridView, string filename)
         {
             BaseFont baseFont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
             PdfPTable pdfT = new PdfPTable(dataGridView.Columns.Count);
+            //structuring
             pdfT.DefaultCell.Padding = 3;
             pdfT.WidthPercentage = 100;
             pdfT.HorizontalAlignment = Element.ALIGN_LEFT;
@@ -68,7 +70,7 @@ namespace FYP_Management_System
                     Document doc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(doc, stream);
                     doc.Open();
-                    string str = string.Format("Date: {0}", DateTime.Now.Date);
+                    string str = string.Format("Date: {0}", DateTime.Now);
 
                     Paragraph paragraph = new Paragraph("  Marks sheet of projects that shows the Marks in each Evaluation against each Student and Project\n" + "                                                             " + str + "\n\n");
                     doc.Add(paragraph);
@@ -85,7 +87,7 @@ namespace FYP_Management_System
 
         private void Save_Click(object sender, EventArgs e)
         {
-            gridTOpdf(dataGridreport, "report2");
+            gridTOpdf(dataGridreport, "report2"); // call here, default file name is report2
         }
     }
 }

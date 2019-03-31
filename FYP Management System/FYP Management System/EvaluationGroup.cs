@@ -33,14 +33,14 @@ namespace FYP_Management_System
             SqlCommand c1 = new SqlCommand(cmdText1, con);
 
             SqlDataReader reader1 = c1.ExecuteReader();
-
+            // load evaluation names in combo box on run time
             while (reader1.Read())
             {
                 comboBoxNames.Items.Add(reader1["Name"].ToString());
 
             }
             reader1.Close();
-            buffer = MarkEvaluationGroup.evaluationId; // get id from advisor form for update.. if we dont make buffer then when we open simple create, it will show data
+            buffer = MarkEvaluationGroup.evaluationId; // get id from advisor form for update.. and show previous data on that id when forms load
             if (buffer > 0 && MarkEvaluationGroup.groupId > 0)
             {
                 String cmdText5 = "SELECT Name, ObtainedMarks FROM GroupEvaluation Join Evaluation ON EvaluationId =Id where EvaluationId = @EvaluationId AND GroupId = @GroupId";
@@ -157,7 +157,7 @@ namespace FYP_Management_System
                     // here check whether boxes are empty for not
                     if (String.IsNullOrEmpty(comboBoxNames.Text) || String.IsNullOrEmpty(textBoxMarks.Text) || Convert.ToInt32(textBoxMarks.Text) < 0)
                     { MessageBox.Show("Fill all boxes must and Marks should'nt be negative"); }
-
+                    // check all validations here
                     if(!String.IsNullOrEmpty(comboBoxNames.Text) && !String.IsNullOrEmpty(textBoxMarks.Text) && Convert.ToInt32(textBoxMarks.Text) >= 0)
                     {
 

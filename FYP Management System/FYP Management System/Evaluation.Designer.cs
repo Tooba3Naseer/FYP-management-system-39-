@@ -35,9 +35,11 @@
             this.Create = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.EvaluationData = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EvaluationData)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -46,9 +48,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(-1, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 51);
+            this.panel2.Size = new System.Drawing.Size(802, 51);
             this.panel2.TabIndex = 7;
             // 
             // label1
@@ -56,7 +58,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(256, 12);
+            this.label1.Location = new System.Drawing.Point(269, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 29);
             this.label1.TabIndex = 4;
@@ -70,9 +72,9 @@
             this.panel1.Controls.Add(this.search);
             this.panel1.Controls.Add(this.Create);
             this.panel1.Controls.Add(this.textBoxSearch);
-            this.panel1.Location = new System.Drawing.Point(12, 69);
+            this.panel1.Location = new System.Drawing.Point(-1, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 62);
+            this.panel1.Size = new System.Drawing.Size(802, 62);
             this.panel1.TabIndex = 8;
             // 
             // search
@@ -89,7 +91,7 @@
             // 
             this.Create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Create.Location = new System.Drawing.Point(659, 23);
+            this.Create.Location = new System.Drawing.Point(685, 23);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(105, 23);
             this.Create.TabIndex = 1;
@@ -114,18 +116,33 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EvaluationData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EvaluationData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EvaluationData.Location = new System.Drawing.Point(12, 154);
+            this.EvaluationData.Location = new System.Drawing.Point(3, 3);
             this.EvaluationData.Name = "EvaluationData";
-            this.EvaluationData.Size = new System.Drawing.Size(776, 275);
+            this.EvaluationData.Size = new System.Drawing.Size(796, 271);
             this.EvaluationData.TabIndex = 9;
             this.EvaluationData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EvaluationData_CellContentClick);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.EvaluationData, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 141);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(802, 277);
+            this.tableLayoutPanel1.TabIndex = 10;
             // 
             // Evaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.EvaluationData);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Evaluation";
@@ -136,6 +153,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EvaluationData)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -149,5 +167,6 @@
         private System.Windows.Forms.Button Create;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.DataGridView EvaluationData;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

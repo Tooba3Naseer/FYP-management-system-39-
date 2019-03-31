@@ -62,9 +62,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 12);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 53);
+            this.panel1.Size = new System.Drawing.Size(802, 53);
             this.panel1.TabIndex = 21;
             // 
             // label1
@@ -72,7 +72,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(280, 12);
+            this.label1.Location = new System.Drawing.Point(282, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 29);
             this.label1.TabIndex = 5;
@@ -119,7 +119,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.94062F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.05938F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LastName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 4);
@@ -137,7 +137,7 @@
             this.tableLayoutPanel1.Controls.Add(this.salary, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 8);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(85, 84);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(86, 72);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
@@ -161,7 +161,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxName.Location = new System.Drawing.Point(107, 3);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(307, 20);
+            this.textBoxName.Size = new System.Drawing.Size(306, 20);
             this.textBoxName.TabIndex = 13;
             // 
             // LastName
@@ -186,7 +186,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(107, 146);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(307, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(306, 20);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // textBoxLast
@@ -196,7 +196,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLast.Location = new System.Drawing.Point(107, 32);
             this.textBoxLast.Name = "textBoxLast";
-            this.textBoxLast.Size = new System.Drawing.Size(307, 20);
+            this.textBoxLast.Size = new System.Drawing.Size(306, 20);
             this.textBoxLast.TabIndex = 12;
             // 
             // Gender
@@ -219,7 +219,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxContact.Location = new System.Drawing.Point(107, 69);
             this.textBoxContact.Name = "textBoxContact";
-            this.textBoxContact.Size = new System.Drawing.Size(307, 20);
+            this.textBoxContact.Size = new System.Drawing.Size(306, 20);
             this.textBoxContact.TabIndex = 11;
             // 
             // Contact
@@ -242,7 +242,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxEmail.Location = new System.Drawing.Point(107, 107);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(307, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(306, 20);
             this.textBoxEmail.TabIndex = 10;
             // 
             // DOB
@@ -315,7 +315,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSalary.Location = new System.Drawing.Point(107, 246);
             this.textBoxSalary.Name = "textBoxSalary";
-            this.textBoxSalary.Size = new System.Drawing.Size(307, 20);
+            this.textBoxSalary.Size = new System.Drawing.Size(306, 20);
             this.textBoxSalary.TabIndex = 7;
             // 
             // salary
@@ -337,15 +337,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Professor",
-            "Associate Professor",
-            "Assisstant Professor",
-            "Lecturer",
-            "Industry Professional"});
             this.comboBox1.Location = new System.Drawing.Point(107, 285);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(307, 21);
+            this.comboBox1.Size = new System.Drawing.Size(306, 21);
             this.comboBox1.TabIndex = 19;
             // 
             // label2

@@ -114,7 +114,7 @@ namespace FYP_Management_System
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Enter RegNo in correct Format and RegNo should be present in Student record!!");
+                    MessageBox.Show("Enter RegNo in correct Format and RegNo should be present in Student record only once!!");
                 }
 
             }
@@ -153,7 +153,7 @@ namespace FYP_Management_System
 
                 catch (Exception)
                 {
-                    MessageBox.Show("Enter RegNo in correct Format and RegNo should be present in Student record!!");
+                    MessageBox.Show("Enter RegNo in correct Format and RegNo should be present in Student record only once!!");
                 }
 
             } 
@@ -174,8 +174,31 @@ namespace FYP_Management_System
             // connection opens
 
             con.Open();
+            string cmdText9 = "SELECT Value FROM Lookup WHERE Category = 'STATUS' ";
+            SqlCommand c9 = new SqlCommand(cmdText9, con);
 
-            buffer = StudentgroupManagment.stID; // get id from advisor form for update.. if we dont make buffer then when we open simple create, it will show data
+            SqlDataReader reader9 = c9.ExecuteReader();
+
+            while (reader9.Read())
+            {
+                comboBox1.Items.Add(reader9["Value"].ToString());
+
+            }
+            reader9.Close();
+
+            string cmdTextt = "SELECT RegistrationNo FROM Student";
+            SqlCommand ct = new SqlCommand(cmdTextt, con);
+
+            SqlDataReader readert = ct.ExecuteReader();
+
+            while (readert.Read())
+            {
+                textBoxRegNo.Items.Add(readert["RegistrationNo"].ToString());
+
+            }
+            readert.Close();
+
+            buffer = StudentgroupManagment.stID; // get id for update
             if (buffer > 0 && StudentgroupManagment.groupID > 0)
             {
                 String cmdText1 = "SELECT (SELECT RegistrationNo FROM Student where StudentId = Id) AS 'reg no', (SELECT Value FROM [Lookup] where Id = Status AND Category = 'STATUS') AS 'status' FROM GroupStudent WHERE StudentId = @StudentId AND GroupId = @GroupId";

@@ -183,7 +183,8 @@ namespace FYP_Management_System
                 }
             }
         }
-
+        // this is for searching purpose, searching based on evaluation, when user enter complete evaluation name, then user able 
+        // to see filtered rows
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(textBoxSearch.Text))
@@ -254,7 +255,7 @@ namespace FYP_Management_System
 
             }
             else
-            {
+            {  // clear datagrid and then update it
                 dataGridgroup.DataSource = null;
                 dataGridgroup.Rows.Clear();
                 dataGridgroup.Columns.Clear();

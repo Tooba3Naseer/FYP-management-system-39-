@@ -65,6 +65,17 @@ namespace FYP_Management_System
             // connection opens
        
             con.Open();
+            string cmdText9 = "SELECT Value FROM Lookup WHERE Category = 'DESIGNATION' ";
+            SqlCommand c9 = new SqlCommand(cmdText9, con);
+
+            SqlDataReader reader9 = c9.ExecuteReader();
+
+            while (reader9.Read())
+            {
+                comboBox1.Items.Add(reader9["Value"].ToString());
+
+            }
+            reader9.Close();
 
             buffer = Advisor.adId; // get id from advisor form for update
             if (buffer >= 0)

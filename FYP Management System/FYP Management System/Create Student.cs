@@ -149,7 +149,7 @@ namespace FYP_Management_System
                     else
                     {
 
-
+                        // if all validations are true, then insert data
                         if (isalphaTest(textBoxName.Text) && (String.IsNullOrEmpty(textBoxLast.Text) || (!String.IsNullOrEmpty(textBoxLast.Text) && (isalphaTest(textBoxLast.Text)))) && isRegNovalid(textBoxRegNo.Text) && (String.IsNullOrEmpty(textBoxContact.Text) || (!String.IsNullOrEmpty(textBoxContact.Text) && contactNoValid(textBoxContact.Text))))
                         {
 

@@ -43,8 +43,8 @@ namespace FYP_Management_System
             Datagridreport2.DataSource = dataTable3;
             conn.Close();
         }
-
-       public void gridTOpdf(DataGridView dataGridView, DataGridView dataGridView2, string filename)
+        // this function will convert two grids to pdf file, plus add title in it.
+        public void gridTOpdf(DataGridView dataGridView, DataGridView dataGridView2, string filename)
         {
             BaseFont baseFont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
             PdfPTable pdfT = new PdfPTable(dataGridView.Columns.Count);
@@ -99,7 +99,7 @@ namespace FYP_Management_System
                     Document doc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(doc, stream);
                     doc.Open();
-                    string str = string.Format("Date: {0}", DateTime.Now.Date);
+                    string str = string.Format("Date: {0}", DateTime.Now);
                     
                     Paragraph paragraph = new Paragraph("                                          List of Projects along with Advisory Board and list of Students\n" + "                                                             " + str+"\n\n");
                     doc.Add(paragraph);
@@ -117,7 +117,7 @@ namespace FYP_Management_System
         private void Save_Click(object sender, EventArgs e)
         {
 
-          gridTOpdf(dataGridreport, Datagridreport2, "report");
+          gridTOpdf(dataGridreport, Datagridreport2, "report"); // call here
             
 
 

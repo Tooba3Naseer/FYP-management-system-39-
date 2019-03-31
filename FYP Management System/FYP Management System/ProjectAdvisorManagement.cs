@@ -87,7 +87,7 @@ namespace FYP_Management_System
             int noOfRows = dataGridproject.RowCount;
             
 
-            if (e.ColumnIndex == 2 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1)) // when click on add button
+            if (e.ColumnIndex == 2 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1)) // when click on assign button
             {
                 projectID = Convert.ToInt32(dataGridproject.Rows[e.RowIndex].Cells[0].Value);
                 this.Hide();
@@ -106,7 +106,7 @@ namespace FYP_Management_System
         {
             ProjectAdvisorDatagrid.Rows[e.RowIndex].ReadOnly = true;
             int noOfRows = ProjectAdvisorDatagrid.RowCount;
-            if (e.ColumnIndex == 5 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))
+            if (e.ColumnIndex == 5 && e.RowIndex >= 0 && e.RowIndex != (noOfRows - 1))  // when click on update
             {
                 projectID = Convert.ToInt32(ProjectAdvisorDatagrid.Rows[e.RowIndex].Cells[0].Value);
                 AdvisorID = Convert.ToInt32(ProjectAdvisorDatagrid.Rows[e.RowIndex].Cells[1].Value);
@@ -176,7 +176,8 @@ namespace FYP_Management_System
             }
 
         }
-
+        // this is for searching purpose, searching based on title, when user enter complete title name, then user able 
+        // to see filtered rows
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(textBoxSearch.Text))

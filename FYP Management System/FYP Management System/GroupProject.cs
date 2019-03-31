@@ -183,7 +183,8 @@ namespace FYP_Management_System
             }
 
         }
-
+        // this is for searching purpose, searching based on title, when user enter complete title name, then user able 
+        // to see filtered rows
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(textBoxSearch.Text))

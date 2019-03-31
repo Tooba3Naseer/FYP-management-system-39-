@@ -49,9 +49,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 60);
+            this.panel1.Size = new System.Drawing.Size(800, 60);
             this.panel1.TabIndex = 27;
             // 
             // label1
@@ -59,7 +59,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(182, 18);
+            this.label1.Location = new System.Drawing.Point(183, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(393, 29);
             this.label1.TabIndex = 5;
@@ -72,7 +72,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.25424F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.74577F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 251F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxNames, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
@@ -108,7 +108,7 @@
             this.comboBoxNames.FormattingEnabled = true;
             this.comboBoxNames.Location = new System.Drawing.Point(114, 3);
             this.comboBoxNames.Name = "comboBoxNames";
-            this.comboBoxNames.Size = new System.Drawing.Size(325, 24);
+            this.comboBoxNames.Size = new System.Drawing.Size(324, 24);
             this.comboBoxNames.TabIndex = 21;
             // 
             // label4
@@ -131,7 +131,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxMarks.Location = new System.Drawing.Point(114, 78);
             this.textBoxMarks.Name = "textBoxMarks";
-            this.textBoxMarks.Size = new System.Drawing.Size(325, 20);
+            this.textBoxMarks.Size = new System.Drawing.Size(324, 20);
             this.textBoxMarks.TabIndex = 23;
             // 
             // panel2
