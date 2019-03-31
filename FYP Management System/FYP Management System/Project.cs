@@ -148,48 +148,43 @@ namespace FYP_Management_System
                     SqlConnection con = new SqlConnection(conURL);
 
                     // connection opens
-                  
+                    con.Open();
 
 
                     try
                     {
 
-                        con.Open();
+                        string cmdText = "DELETE FROM Project WHERE Id = @Id";
+
+                        SqlCommand c = new SqlCommand(cmdText, con);
 
 
+                        int Idy = Convert.ToInt32(ProjectData.Rows[e.RowIndex].Cells[0].Value);
+                        c.Parameters.Add(new SqlParameter("@Id", Idy));
+                        //execute it
+
+                        int result = c.ExecuteNonQuery();
+                        if (result < 0)
+                            MessageBox.Show("Error");
+
+                        // connection closed
+                        con.Close();
+                        // update the grid after deletion
+                        ProjectData.DataSource = null;
+                        ProjectData.Rows.Clear();
+                        ProjectData.Columns.Clear();
+                        update();
+
+                        // show dialog box if added in table of database
+
+                        MessageBox.Show("Successfully Deleted");
                     }
                     catch (Exception)
 
                     {
 
-                        MessageBox.Show("error");
+                        MessageBox.Show("Project might be assigned to group or any advisor assign to this project. So first delete from assignment record then delete it here.");
                     }
-
-
-                    string cmdText = "DELETE FROM Project WHERE Id = @Id";
-
-                    SqlCommand c = new SqlCommand(cmdText, con);
-                   
-
-                    int Idy = Convert.ToInt32(ProjectData.Rows[e.RowIndex].Cells[0].Value);
-                    c.Parameters.Add(new SqlParameter("@Id", Idy));
-                    //execute it
-
-                    int result = c.ExecuteNonQuery();
-                    if (result < 0)
-                        MessageBox.Show("Error");
-
-                    // connection closed
-                    con.Close();
-                    // update the grid after deletion
-                    ProjectData.DataSource = null;
-                    ProjectData.Rows.Clear();
-                    ProjectData.Columns.Clear();
-                    update();
-
-                    // show dialog box if added in table of database
-
-                    MessageBox.Show("Successfully Deleted");
 
                 }
                 else if (dialogResult == DialogResult.No)

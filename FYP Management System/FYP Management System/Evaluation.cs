@@ -40,27 +40,15 @@ namespace FYP_Management_System
                     // connection opens
                     // purpose of checker it to find whether user enter all data in correct format or not
                     // if not in correct format then show exception and handle in catch section
-
+                    con.Open();
 
                     try
                     {
 
-                        con.Open();
-
-
-                    }
-                    catch (Exception)
-
-                    {
-
-                        MessageBox.Show("error");
-                    }
-
-
                     string cmdText = "DELETE FROM Evaluation WHERE Id = @Id";
 
                     SqlCommand c = new SqlCommand(cmdText, con);
-                   
+
 
                     int Idy = Convert.ToInt32(EvaluationData.Rows[e.RowIndex].Cells[0].Value);
                     c.Parameters.Add(new SqlParameter("@Id", Idy));
@@ -81,6 +69,13 @@ namespace FYP_Management_System
 
                     // show dialog box if added in table of database
                     MessageBox.Show("Successfully Deleted!!");
+                    }
+                    catch (Exception)
+
+                    {
+
+                        MessageBox.Show("This evaluation might be marked against some student so first delete that record then delete it here");
+                    }
 
                 }
                 else if (dialogResult == DialogResult.No)

@@ -78,5 +78,11 @@ namespace FYP_Management_System
             Report1 eg = new Report1();
             eg.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Report2 eg = new Report2();
+            eg.ShowDialog();
+        }
     }
 }

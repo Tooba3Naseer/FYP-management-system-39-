@@ -147,28 +147,15 @@ namespace FYP_Management_System
                     SqlConnection con = new SqlConnection(conURL);
 
                     // connection opens
-                    
 
-
+                    con.Open();
                     try
                     {
-
-                        con.Open();
-
-
-                    }
-                    catch (Exception)
-
-                    {
-
-                        MessageBox.Show("error");
-                    }
-
 
                     string cmdText = "DELETE FROM Student WHERE Id = @Id";
 
                     SqlCommand c = new SqlCommand(cmdText, con);
-                    
+
 
                     int Idy = Convert.ToInt32(StudentData.Rows[e.RowIndex].Cells[0].Value);
                     c.Parameters.Add(new SqlParameter("@Id", Idy));
@@ -182,7 +169,7 @@ namespace FYP_Management_System
                     c2.Parameters.Add(new SqlParameter("@Id", Idy));
                     c2.ExecuteNonQuery();
                     // connection closed
-                    
+
                     con.Close();
 
                     StudentData.DataSource = null;
@@ -191,6 +178,13 @@ namespace FYP_Management_System
                     update();
 
                     MessageBox.Show("Successfully Deleted");
+                }
+                    catch (Exception)
+
+                    {
+
+                        MessageBox.Show("This student might be assign to any project. So first delete that record then delete it from here");
+                    }
 
                 }
                 else if (dialogResult == DialogResult.No)

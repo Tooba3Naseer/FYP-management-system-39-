@@ -141,50 +141,43 @@ namespace FYP_Management_System
                     SqlConnection con = new SqlConnection(conURL);
 
                     // connection opens
-                   
-
-
+                    con.Open();
                     try
                     {
 
-                        con.Open();
+                        string cmdText = "DELETE FROM Advisor WHERE Id = @Id";
 
+                        SqlCommand c = new SqlCommand(cmdText, con);
 
+                        int Idy = Convert.ToInt32(AdvisorData.Rows[e.RowIndex].Cells[0].Value);
+                        c.Parameters.Add(new SqlParameter("@Id", Idy));
+                        //execute it
+
+                        int result = c.ExecuteNonQuery();
+                        if (result < 0)
+                            MessageBox.Show("Error");
+                        string cmdText2 = "DELETE FROM Person WHERE Id = @Id";
+                        SqlCommand c2 = new SqlCommand(cmdText2, con);
+                        c2.Parameters.Add(new SqlParameter("@Id", Idy));
+                        c2.ExecuteNonQuery();
+                        // connection closed
+
+                        con.Close();
+
+                        AdvisorData.DataSource = null;
+                        AdvisorData.Rows.Clear();
+                        AdvisorData.Columns.Clear();
+                        update();
+
+                        // show dialog box if del
+                        MessageBox.Show("Successfully Deleted");
                     }
                     catch (Exception)
 
                     {
 
-                        MessageBox.Show("error");
+                        MessageBox.Show("This advisor might be assign to the project. So first delete that record, then delete it here.");
                     }
-
-
-                    string cmdText = "DELETE FROM Advisor WHERE Id = @Id";
-
-                    SqlCommand c = new SqlCommand(cmdText, con);
-
-                    int Idy = Convert.ToInt32(AdvisorData.Rows[e.RowIndex].Cells[0].Value);
-                    c.Parameters.Add(new SqlParameter("@Id", Idy));
-                    //execute it
-
-                    int result = c.ExecuteNonQuery();
-                    if (result < 0)
-                        MessageBox.Show("Error");
-                    string cmdText2 = "DELETE FROM Person WHERE Id = @Id";
-                    SqlCommand c2 = new SqlCommand(cmdText2, con);
-                    c2.Parameters.Add(new SqlParameter("@Id", Idy));
-                    c2.ExecuteNonQuery();
-                    // connection closed
-                   
-                    con.Close();
-
-                    AdvisorData.DataSource = null;
-                    AdvisorData.Rows.Clear();
-                    AdvisorData.Columns.Clear();
-                    update();
-
-                    // show dialog box if del
-                    MessageBox.Show("Successfully Deleted");
 
                 }
                 else if (dialogResult == DialogResult.No)

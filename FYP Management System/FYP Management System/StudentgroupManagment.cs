@@ -135,23 +135,11 @@ namespace FYP_Management_System
                     SqlConnection con = new SqlConnection(conURL);
 
                     // connection opens
-
+                    con.Open();
 
 
                     try
-                    {
-
-                        con.Open();
-
-
-                    }
-                    catch (Exception)
-
-                    {
-
-                        MessageBox.Show("error");
-                    }
-
+                    { 
 
                     string cmdText = "DELETE FROM GroupStudent WHERE GroupId = @GroupId";
 
@@ -163,7 +151,7 @@ namespace FYP_Management_System
                     // execute it
 
                     c.ExecuteNonQuery();
-                    
+
                     string cmdText2 = "DELETE FROM [Group] WHERE Id = @Id";
                     SqlCommand c2 = new SqlCommand(cmdText2, con);
                     c2.Parameters.Add(new SqlParameter("@Id", Idy));
@@ -181,6 +169,13 @@ namespace FYP_Management_System
                     update();
 
                     MessageBox.Show("Successfully Deleted");
+                }
+                     catch (Exception)
+
+                    {
+
+                        MessageBox.Show("Project might be assign to this group or this group might be some record in evaluation. So delete that record then delete it here");
+                    }
 
                 }
                 else if (dialogResult == DialogResult.No)

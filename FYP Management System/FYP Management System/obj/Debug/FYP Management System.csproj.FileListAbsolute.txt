@@ -29,3 +29,4 @@ F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\o
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\itextsharp.dll
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\itextsharp.xml
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.CopyComplete
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Report2.resources
