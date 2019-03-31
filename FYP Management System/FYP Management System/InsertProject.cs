@@ -92,7 +92,7 @@ namespace FYP_Management_System
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Enter Description/Title in correct Format!!");
+                    MessageBox.Show("Enter Description/Title in correct Format!!.. Title , Description contains all alphabets");
                 }
 
             }
@@ -128,7 +128,7 @@ namespace FYP_Management_System
 
                 catch (Exception)
                 {
-                    MessageBox.Show("Enter Description/Title in correct Format!!");
+                    MessageBox.Show("Enter Description/Title in correct Format!!.. Title , Description contains all alphabets");
                 }
 
             }

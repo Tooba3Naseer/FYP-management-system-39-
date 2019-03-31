@@ -1,64 +1,32 @@
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\FYP Management System.exe.config
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\FYP Management System.exe
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\FYP Management System.pdb
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\itextsharp.dll
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\itextsharp.xml
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csprojAssemblyReference.cache
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AddStudent.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Advisor.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AssignAdvisor.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AssignProject.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Evaluation.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Student.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.CreateAdvisor.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Evaluation.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.EvaluationGroup.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.GroupProject.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Home.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.InsertProject.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.MarkEvaluationGroup.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.PersonStudent.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Project.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ProjectAdvisorManagement.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Properties.Resources.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Report1.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Report2.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ShowMembers.resources
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.StudentgroupManagment.resources
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.GenerateResource.cache
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.CoreCompileInputs.cache
+F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.CopyComplete
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.exe
 F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.pdb
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AddStudent.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.StudentgroupManagment.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ProjectAdvisorManagement.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AssignAdvisor.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.GroupProject.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AssignProject.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ShowMembers.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.EvaluationGroup.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.MarkEvaluationGroup.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Report1.resources
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\itextsharp.dll
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\bin\Debug\itextsharp.xml
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.CopyComplete
-F:\c# projects\Semester 6 projects\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Report2.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\bin\Debug\FYP Management System.exe.config
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\bin\Debug\FYP Management System.exe
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\bin\Debug\FYP Management System.pdb
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\bin\Debug\itextsharp.dll
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\bin\Debug\itextsharp.xml
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csprojAssemblyReference.cache
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AddStudent.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Advisor.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AssignAdvisor.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.AssignProject.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Evaluation.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Create_Student.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.CreateAdvisor.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Evaluation.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.EvaluationGroup.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.GroupProject.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Home.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.InsertProject.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.MarkEvaluationGroup.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.PersonStudent.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Project.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ProjectAdvisorManagement.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Properties.Resources.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Report1.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.Report2.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.ShowMembers.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP_Management_System.StudentgroupManagment.resources
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.GenerateResource.cache
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.CoreCompileInputs.cache
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP Management System.csproj.CopyComplete
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP Management System.exe
-C:\Users\HP 820\Documents\GitHub\FYP-management-system\FYP Management System\FYP Management System\obj\Debug\FYP Management System.pdb
